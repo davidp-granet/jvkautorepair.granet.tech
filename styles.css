@@ -153,7 +153,7 @@ button, input, textarea { font: inherit; }
 .marquee-image-link { display: block; width: 100%; line-height: 0; }
 .marquee-image-link img {
   width: 100%;
-  height: clamp(260px, 42vw, 620px);
+  /* height: clamp(260px, 42vw, 620px); */
   object-fit: cover;
   object-position: center;
   display: block;
@@ -375,7 +375,7 @@ h1 { max-width: 860px; font-size: clamp(3rem, 7vw, 6.6rem); letter-spacing: -.07
   .container { width: min(var(--max), calc(100% - 28px)); }
   .service-grid, .coupon-grid, .action-card-grid, .contact-grid, .cards-5, .quick-grid, .footer-grid, .link-hub-grid, .services-list-grid { grid-template-columns: 1fr; }
   .quick-grid a, .quick-grid a:last-child { border: 0; border-top: 1px solid #e5e7ee; }
-  .marquee-image-link img { height: clamp(220px, 62vw, 360px); }
+  /* .marquee-image-link img { height: clamp(220px, 62vw, 360px); } */
   .link-hub-section { padding: 2.25rem 0 3rem; }
   .hub-card { min-height: 175px; }
   .footer-bottom { justify-content: flex-start; }
