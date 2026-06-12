@@ -67,6 +67,7 @@ button, input, textarea { font: inherit; }
   z-index: 50;
   background: rgba(255, 255, 255, .9);
   border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   box-shadow: 0 10px 30px rgba(17,24,39,.06);
 }
