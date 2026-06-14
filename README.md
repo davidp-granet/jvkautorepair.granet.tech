@@ -3,12 +3,12 @@
 This is a multi-page static site for JVK Auto Service & Sales.
 
 ## Pages
-- `index.html` — home page with the mountain banner and direct customer routing
-- `services.html` — auto repair services and AutoLeap booking CTAs
-- `deals.html` — coupons/specials page
-- `contact.html` — service/sales/U-Haul contact paths plus simple fallback mailto form
-- `used-vehicles.html` — instant redirect to live Carsforsale inventory
-- `uhaul.html` — instant redirect to the official JVK U-Haul location page
+- `index.html` — home page with huge cross-screen monthly deal banner placeholder
+- `services.html` — auto repair services and AutoLeap booking CTA
+- `deals.html` — coupons/specials page with the same large promo-banner slot
+- `used-vehicles.html` — routes customers to the existing Carsforsale inventory, financing, trade-in, and test-drive flows
+- `uhaul.html` — U-Haul Neighborhood Dealer landing page
+- Contact is now a site-wide modal opened from the header. `contact.html` redirects to `index.html#contact` as a fallback.
 
 ## External systems linked
 - AutoLeap booking: https://app.myautoleap.com/#/customer-appointment-request/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTcyMjExMGQ3MjU5MDAyMzI1OGYyYyIsImNvbXBhbnlJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY1YSIsInNob3BJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY2YyIsImlzQ29uc3VtZXIiOnRydWUsImlhdCI6MTczODg3MzMyNn0.xbHKh1FTRKF09D29kLP2rGA5WZ_JU78QvMjMRIlIIWc?trackingId=
@@ -41,11 +41,11 @@ The homepage now uses the downloaded banner image:
 
 - `assets/0326-home-marquee.webp`
 
-The four primary homepage/header links are:
+The four primary homepage links are:
 
-1. Book Auto Service → AutoLeap scheduler, direct one-click external link
-2. Reserve U-Haul → JVK official U-Haul location page, direct one-click external link
-3. Browse Used Cars → `https://www.jvkautos.com/cars-for-sale`, direct one-click external link
+1. Book Auto Service → AutoLeap scheduler
+2. Reserve U-Haul → JVK official U-Haul location page
+3. JVK Auto Sales → `https://www.jvkautos.com/`
 4. View Services → `services.html`
 
 Recommended Nginx convenience redirects:
@@ -59,13 +59,18 @@ location = /book-service {
     return 302 https://app.myautoleap.com/#/customer-appointment-request/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTcyMjExMGQ3MjU5MDAyMzI1OGYyYyIsImNvbXBhbnlJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY1YSIsInNob3BJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY2YyIsImlzQ29uc3VtZXIiOnRydWUsImlhdCI6MTczODg3MzMyNn0.xbHKh1FTRKF09D29kLP2rGA5WZ_JU78QvMjMRIlIIWc?trackingId=;
 }
 
-location = /used-cars {
-    return 302 https://www.jvkautos.com/cars-for-sale;
-}
-
 location = /autos {
-    return 302 https://www.jvkautos.com/cars-for-sale;
+    return 302 https://www.jvkautos.com/;
 }
 ```
 
 Use 302 while testing; change to 301 after the customer approves.
+
+
+## Latest tightening notes
+- Header CTAs now use vibrant button styling.
+- Browse Used Cars goes directly to `https://www.jvkautos.com/cars-for-sale`.
+- U-Haul goes directly to JVK's official U-Haul location page.
+- Book Service goes directly to the AutoLeap scheduler.
+- Homepage includes a four-card five-star reviews section.
+- Light theme is enforced in `styles.css` overrides at the bottom of the file.
