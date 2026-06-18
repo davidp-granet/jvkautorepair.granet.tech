@@ -270,7 +270,7 @@ body { color: var(--text); background: var(--bg); }
   box-shadow: 0 30px 90px rgba(0,0,0,.35);
   background:
     linear-gradient(90deg, rgba(8, 12, 20, .84) 0%, rgba(8, 12, 20, .64) 42%, rgba(8, 12, 20, .22) 100%),
-    url("assets/jvk-contact-map.webp") center / cover no-repeat;
+    url("/assets/jvk-contact-map.webp") center / cover no-repeat;
   color: #fff;
   outline: none;
 }
