@@ -92,6 +92,7 @@ textarea {
   z-index: 50;
   background: rgba(8, 9, 12, .82);
   border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
 
@@ -318,6 +319,7 @@ h1 {
   background: linear-gradient(160deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .05));
   box-shadow: var(--shadow);
   padding: 2rem;
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
 
@@ -1355,6 +1357,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(5, 8, 16, .72);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
