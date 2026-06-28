@@ -75,6 +75,12 @@ contactOpeners.forEach((opener) => {
   });
 });
 contactClosers.forEach((closer) => closer.addEventListener('click', closeContactModal));
+contactClosers.forEach((closer) => closer.addEventListener('keydown', event => {
+  if ((event.key === 'Enter' || event.key === ' ') && contactModal && contactModal.classList.contains('is-open')) {
+    event.preventDefault();
+    closeContactModal();
+  }
+}));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && contactModal && contactModal.classList.contains('is-open')) {
     closeContactModal();
