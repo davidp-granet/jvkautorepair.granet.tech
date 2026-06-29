@@ -703,137 +703,6 @@ h1 {
   transition-delay: .16s;
 }
 
-@media (max-width: 1050px) {
-  .cards-5 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .service-grid,
-  .coupon-grid,
-  .action-card-grid,
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero-grid,
-  .split-grid,
-  .form-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-card {
-    justify-self: start;
-  }
-
-  .quick-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 930px) {
-  .topbar {
-    display: none;
-  }
-
-  .nav {
-    min-height: 70px;
-  }
-
-  .nav-toggle {
-    display: inline-grid;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
-    place-content: center;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, .05);
-  }
-
-  .nav-toggle span:not(.sr-only) {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #fff;
-  }
-
-  .nav-links {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 75px;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: rgba(8, 9, 12, .98);
-    box-shadow: var(--shadow);
-  }
-
-  .nav-links.is-open {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: .65rem .8rem;
-  }
-
-  h1 {
-    font-size: clamp(2.75rem, 13vw, 5rem);
-  }
-
-  .promo-placeholder strong {
-    font-size: clamp(3.3rem, 18vw, 7rem);
-  }
-
-  .section {
-    padding: 4rem 0;
-  }
-
-  .cta-inner {
-    display: grid;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    width: min(var(--max), calc(100% - 28px));
-  }
-
-  .service-grid,
-  .coupon-grid,
-  .action-card-grid,
-  .contact-grid,
-  .cards-5,
-  .quick-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .quick-grid a,
-  .quick-grid a:last-child {
-    border: 0;
-    border-top: 1px solid #e5e7ee;
-  }
-
-  .promo-frame {
-    padding: 12px;
-    min-height: 300px;
-  }
-
-  .promo-placeholder {
-    border-radius: 20px;
-    min-height: 260px;
-  }
-
-  .footer-bottom {
-    justify-content: flex-start;
-  }
-}
-
-
 /* 2026-06 update: homepage banner image + direct customer routing */
 .topbar-uhaul {
   color: var(--uhaul-orange, #ff7a00) !important;
@@ -977,30 +846,6 @@ h1 {
   margin-top: auto;
   padding-top: 1rem;
 }
-
-@media (max-width: 1150px) {
-
-  .link-hub-grid,
-  .services-list-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .link-hub-section {
-    padding: 2rem 0 3rem;
-  }
-
-  .link-hub-grid,
-  .services-list-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hub-card {
-    min-height: 175px;
-  }
-}
-
 
 /* 2026-06 tightening: light theme, header CTA buttons, and reviews */
 :root {
@@ -1221,42 +1066,6 @@ body {
   color: var(--dark-text);
 }
 
-@media (max-width: 1150px) {
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 930px) {
-  .nav-toggle {
-    border-color: #d7dce7;
-    background: #fff;
-  }
-
-  .nav-toggle span:not(.sr-only) {
-    background: var(--dark-text);
-  }
-
-  .nav-links {
-    background: #fff;
-    border-color: #e1e5ee;
-    box-shadow: var(--shadow);
-  }
-
-  .nav-links > .nav-contact-button {
-    color: var(--dark-text);
-    text-align: center;
-    border: solid lightgray 1px;
-  }
-}
-
-@media (max-width: 640px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
 /* 2026-06 update: meet the team section */
 .team-section {
   background: #f7f8fb;
@@ -1309,17 +1118,6 @@ body {
   color: var(--dark-muted);
   margin: 0;
 }
-
-@media (max-width: 900px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .team-card {
-    min-height: unset;
-  }
-}
-
 
 /* 2026-06 update: contact modal with map background */
 .nav-contact-button {
@@ -1483,43 +1281,6 @@ body.modal-open {
   overflow: hidden;
 }
 
-@media (max-width: 700px) {
-  .contact-modal {
-    padding: 12px;
-    align-items: stretch;
-  }
-
-  .contact-modal-dialog {
-    min-height: calc(100vh - 24px);
-    border-radius: 24px;
-    background-position: 58% center;
-  }
-
-  .contact-modal-content {
-    overflow-y: scroll;
-    scrollbar-width: none;
-    min-height: unset;
-    height: calc(100vh - 50px);
-    padding: 5.5rem 1.2rem 1.4rem;
-    justify-content: flex-start;
-  }
-
-  .contact-pill {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: .25rem;
-  }
-
-  .contact-pill strong {
-    white-space: normal;
-  }
-
-  .contact-modal-actions {
-    display: grid;
-  }
-}
-
-
 /* 2026-06 polish: fix light-theme ghost buttons and contact page copy/layout */
 .btn-ghost {
   color: var(--dark-text) !important;
@@ -1569,12 +1330,6 @@ body.modal-open {
   border-color: rgba(255, 255, 255, .6);
   background: white;
   box-shadow: none;
-}
-
-@media (max-width: 640px) {
-  .contact-clean-hero h1 {
-    font-size: clamp(2.6rem, 13vw, 4.2rem);
-  }
 }
 
 .redirect-page {
@@ -1743,6 +1498,44 @@ body.modal-open {
   transform: none;
 }
 
+@media (max-width: 1150px) {
+  .link-hub-grid,
+  .services-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .cards-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-grid,
+  .coupon-grid,
+  .action-card-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid,
+  .split-grid,
+  .form-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    justify-self: start;
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 980px) {
   .summer-deal-card {
     grid-template-columns: 1fr;
@@ -1757,7 +1550,196 @@ body.modal-open {
   }
 }
 
+@media (max-width: 930px) {
+  .topbar {
+    display: none;
+  }
+
+  .nav {
+    min-height: 70px;
+  }
+
+  .nav-toggle {
+    display: inline-grid;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    place-content: center;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .05);
+  }
+
+  .nav-toggle span:not(.sr-only) {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+  }
+
+  .nav-links {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 75px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: rgba(8, 9, 12, .98);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: .65rem .8rem;
+  }
+
+  h1 {
+    font-size: clamp(2.75rem, 13vw, 5rem);
+  }
+
+  .promo-placeholder strong {
+    font-size: clamp(3.3rem, 18vw, 7rem);
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .cta-inner {
+    display: grid;
+  }
+
+  .nav-toggle {
+    border-color: #d7dce7;
+    background: #fff;
+  }
+
+  .nav-toggle span:not(.sr-only) {
+    background: var(--dark-text);
+  }
+
+  .nav-links {
+    background: #fff;
+    border-color: #e1e5ee;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links>.nav-contact-button {
+    color: var(--dark-text);
+    text-align: center;
+    border: solid lightgray 1px;
+  }
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    min-height: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-modal {
+    padding: 12px;
+    align-items: stretch;
+  }
+
+  .contact-modal-dialog {
+    min-height: calc(100vh - 24px);
+    border-radius: 24px;
+    background-position: 58% center;
+  }
+
+  .contact-modal-content {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    min-height: unset;
+    height: calc(100vh - 50px);
+    padding: 5.5rem 1.2rem 1.4rem;
+    justify-content: flex-start;
+  }
+
+  .contact-pill {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .25rem;
+  }
+
+  .contact-pill strong {
+    white-space: normal;
+  }
+
+  .contact-modal-actions {
+    display: grid;
+  }
+}
+
 @media (max-width: 640px) {
+  .container {
+    width: min(var(--max), calc(100% - 28px));
+  }
+
+  .service-grid,
+  .coupon-grid,
+  .action-card-grid,
+  .contact-grid,
+  .cards-5,
+  .quick-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-grid a,
+  .quick-grid a:last-child {
+    border: 0;
+    border-top: 1px solid #e5e7ee;
+  }
+
+  .promo-frame {
+    padding: 12px;
+    min-height: 300px;
+  }
+
+  .promo-placeholder {
+    border-radius: 20px;
+    min-height: 260px;
+  }
+
+  .footer-bottom {
+    justify-content: flex-start;
+  }
+
+  .link-hub-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .link-hub-grid,
+  .services-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-card {
+    min-height: 175px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-clean-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+  }
+
   .summer-deals-section {
     padding: 1.5rem 0 3rem;
   }
