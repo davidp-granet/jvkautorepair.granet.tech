@@ -2,7 +2,8 @@
 const toggle = document.querySelector('[data-nav-toggle]');
 const links = document.querySelector('[data-nav-links]');
 if (toggle && links) {
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', event => {
+    event.stopPropagation();
     const open = links.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
   });
@@ -85,6 +86,22 @@ contactClosers.forEach((closer) => closer.addEventListener('keydown', event => {
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && contactModal && contactModal.classList.contains('is-open')) {
     closeContactModal();
+  }
+});
+
+document.addEventListener('click', event => {
+  const navMenu = document.querySelector('.nav-links.is-open');
+  if (navMenu) {
+    /** @type {HTMLElement} */
+    let element;
+    for (element = event.target; element !== document.body; element = element.parentElement) {
+      if (event.target === navMenu) {
+        return;
+      }
+    }
+
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', false);
   }
 });
 
