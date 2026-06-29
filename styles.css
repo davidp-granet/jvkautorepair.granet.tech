@@ -728,7 +728,7 @@ h1 {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 930px) {
   .topbar {
     display: none;
   }
@@ -759,7 +759,7 @@ h1 {
     position: absolute;
     left: 20px;
     right: 20px;
-    top: 76px;
+    top: 75px;
     display: none;
     flex-direction: column;
     align-items: stretch;
@@ -1225,7 +1225,7 @@ body {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 930px) {
   .nav-toggle {
     border-color: #d7dce7;
     background: #fff;
@@ -1236,13 +1236,15 @@ body {
   }
 
   .nav-links {
-    background: rgba(255, 255, 255, .98);
+    background: #fff;
     border-color: #e1e5ee;
     box-shadow: var(--shadow);
   }
 
-  .nav-links a:not(.btn) {
+  .nav-links > .nav-contact-button {
     color: var(--dark-text);
+    text-align: center;
+    border: solid lightgray 1px;
   }
 }
 
