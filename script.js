@@ -34,7 +34,6 @@ if (mailForm) {
   });
 }
 
-
 const contactModal = document.querySelector('[data-contact-modal]');
 const contactOpeners = document.querySelectorAll('[data-contact-open]');
 const contactClosers = document.querySelectorAll('[data-contact-close]');
@@ -74,6 +73,7 @@ contactOpeners.forEach((opener) => {
     openContactModal();
   });
 });
+
 contactClosers.forEach((closer) => closer.addEventListener('click', closeContactModal));
 contactClosers.forEach((closer) => closer.addEventListener('keydown', event => {
   if ((event.key === 'Enter' || event.key === ' ') && contactModal && contactModal.classList.contains('is-open')) {
@@ -81,12 +81,12 @@ contactClosers.forEach((closer) => closer.addEventListener('keydown', event => {
     closeContactModal();
   }
 }));
-document.addEventListener('keydown', (event) => {
+
+document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && contactModal && contactModal.classList.contains('is-open')) {
     closeContactModal();
   }
 });
-
 
 // Open the contact modal from /index.html#contact or any same-page #contact link.
 window.addEventListener('DOMContentLoaded', () => {
