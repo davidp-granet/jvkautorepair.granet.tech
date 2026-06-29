@@ -1565,16 +1565,10 @@ body.modal-open {
 }
 
 .contact-modal-actions .btn-ghost {
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, .6);
-  background: rgba(255, 255, 255, .12);
-  box-shadow: none;
-}
-
-.contact-modal-actions .btn-ghost:hover,
-.contact-modal-actions .btn-ghost:focus-visible {
   color: #111827 !important;
-  background: #ffffff;
+  border-color: rgba(255, 255, 255, .6);
+  background: white;
+  box-shadow: none;
 }
 
 @media (max-width: 640px) {
