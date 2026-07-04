@@ -1029,6 +1029,25 @@ body {
   background: #ffffff;
 }
 
+.reviews-section .section-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.reviews-section .section-head p.eyebrow {
+  margin-bottom: 0;
+}
+
+.reviews-section .section-head span {
+  color: var(--dark-muted);
+}
+
+.reviews-section .section-head .google-icon {
+  margin-right: 10px;
+}
+
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1298,13 +1317,17 @@ body.modal-open {
   background: #ffffff;
   border: 1px solid #cfd6e3;
   box-shadow: 0 10px 26px rgba(16, 24, 40, .08);
+
+  border-color: rgba(255, 255, 255, .6);
 }
 
 .btn-ghost:hover,
 .btn-ghost:focus-visible {
-  color: #ffffff !important;
-  background: linear-gradient(135deg, #111827, #374151);
-  border-color: transparent;
+  /* color: #ffffff !important; */
+  /* background: linear-gradient(135deg, #111827, #374151); */
+  /* border-color: transparent; */
+
+  box-shadow: 0 10px 26px rgba(16, 24, 40, .08);
 }
 
 .contact-clean-hero h1 {
