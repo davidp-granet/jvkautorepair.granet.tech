@@ -11,7 +11,7 @@ This is a multi-page static site for JVK Auto Service & Sales.
 - Contact is now a site-wide modal opened from the header. `contact.html` redirects to `index.html#contact` as a fallback.
 
 ## External systems linked
-- AutoLeap booking: https://app.myautoleap.com/#/customer-appointment-request/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTcyMjExMGQ3MjU5MDAyMzI1OGYyYyIsImNvbXBhbnlJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY1YSIsInNob3BJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY2YyIsImlzQ29uc3VtZXIiOnRydWUsImlhdCI6MTczODg3MzMyNn0.xbHKh1FTRKF09D29kLP2rGA5WZ_JU78QvMjMRIlIIWc?trackingId=
+- AutoLeap booking: https://myalp.io/nuatgx
 - Carsforsale inventory: https://www.jvkautos.com/cars-for-sale
 - Carsforsale financing: https://www.jvkautos.com/loan-application
 - Carsforsale trade-in: https://www.jvkautos.com/value-my-trade
@@ -56,7 +56,7 @@ location = /uhaul {
 }
 
 location = /book-service {
-    return 302 https://app.myautoleap.com/#/customer-appointment-request/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTcyMjExMGQ3MjU5MDAyMzI1OGYyYyIsImNvbXBhbnlJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY1YSIsInNob3BJZCI6IjY3OTcyYWI2NTU4YjNjYWY5YjdjZDY2YyIsImlzQ29uc3VtZXIiOnRydWUsImlhdCI6MTczODg3MzMyNn0.xbHKh1FTRKF09D29kLP2rGA5WZ_JU78QvMjMRIlIIWc?trackingId=;
+    return 302 https://myalp.io/nuatgx;
 }
 
 location = /autos {
