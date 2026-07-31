@@ -1595,7 +1595,7 @@ body.modal-open {
   }
 
   .summer-deal-badge {
-    width: min(240px, 82vw);
+    width: min(180px, 82vw);
   }
 
   .summer-deal-grid {
