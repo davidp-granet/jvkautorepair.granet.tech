@@ -266,7 +266,7 @@ textarea {
 
 .eyebrow {
   margin: 0 0 .75rem;
-  color: var(--gold);
+  color: var(--red-2);
   font-weight: 950;
   text-transform: uppercase;
   letter-spacing: .16em;
@@ -465,7 +465,7 @@ h1 {
 
 .text-link {
   display: inline-block;
-  color: var(--gold);
+  color: var(--red-2);
   font-weight: 950;
   margin-top: 1rem;
 }
