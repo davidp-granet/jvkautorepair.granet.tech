@@ -1434,6 +1434,10 @@ body.modal-open {
   z-index: 1;
 }
 
+.summer-deal-copy > :first-child {
+  margin-top: 50px;
+}
+
 .summer-deal-card h1 {
   max-width: 100%;
   margin: 0;
