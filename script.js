@@ -136,7 +136,7 @@ function closeSpecialModal() {
   specialModal.classList.remove('is-open');
   specialModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
-  if (window.location.hash === '#special') {
+  if (window.location.hash === '#seasonal') {
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
   if (specialModalLastFocus && typeof specialModalLastFocus.focus === 'function') specialModalLastFocus.focus();
@@ -149,8 +149,8 @@ specialOpeners.forEach((opener) => {
       links.classList.remove('is-open');
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     }
-    if (window.location.hash !== '#special') {
-      history.replaceState(null, '', '#special');
+    if (window.location.hash !== '#seasonal') {
+      history.replaceState(null, '', '#seasonal');
     }
     openSpecialModal();
   });
@@ -186,9 +186,9 @@ document.addEventListener('click', event => {
   }
 });
 
-// Open the special modal from /index.html#special or any same-page #special link.
+// Open the special modal from /index.html#seasonal or any same-page #seasonal link.
 window.addEventListener('DOMContentLoaded', () => {
-  if (window.location.hash === '#special') {
+  if (window.location.hash === '#seasonal') {
     openSpecialModal();
   }
 });
