@@ -1813,4 +1813,5 @@ body.modal-open {
 a.granet-link {
   display: inline;
   margin: 0;
+  text-decoration: underline;
 }
