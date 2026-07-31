@@ -83,7 +83,7 @@ textarea {
   margin-inline: auto;
 }
 
-.special-container {
+.seasonal-container {
   width: min(var(--max), calc(100% - 40px));
   max-height: calc(100vh - 40px);
   overflow-y: auto;
