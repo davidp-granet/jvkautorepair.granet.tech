@@ -1,0 +1,104 @@
+/*
+ * JVK Auto Service & Sales
+ * Floating Facebook Messenger button
+ *
+ * Messenger destination:
+ * https://m.me/61568771353611
+ */
+
+.jvk-messenger-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 52px;
+  padding: 0 20px;
+
+  border: 0;
+  border-radius: 999px;
+  background: #0866ff;
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.22),
+    0 2px 6px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.jvk-messenger-button:hover {
+  background: #075ce5;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.26),
+    0 3px 8px rgba(0, 0, 0, 0.18);
+}
+
+.jvk-messenger-button:active {
+  transform: translateY(0);
+}
+
+.jvk-messenger-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow:
+    0 0 0 6px #0866ff,
+    0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.jvk-messenger-button__icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.jvk-messenger-button__text {
+  white-space: nowrap;
+}
+
+/* Keep the button clear of mobile browser controls and safe areas. */
+@supports (bottom: env(safe-area-inset-bottom)) {
+  .jvk-messenger-button {
+    right: calc(16px + env(safe-area-inset-right));
+    bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Compact mobile presentation. */
+@media (max-width: 480px) {
+  .jvk-messenger-button {
+    right: 14px;
+    bottom: 14px;
+    min-height: 50px;
+    padding: 0 16px;
+    font-size: 15px;
+  }
+
+  .jvk-messenger-button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .jvk-messenger-button {
+    transition: none;
+  }
+}
