@@ -83,6 +83,13 @@ textarea {
   margin-inline: auto;
 }
 
+.special-container {
+  width: min(var(--max), calc(100% - 40px));
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  margin-inline: auto;
+}
+
 .narrow {
   max-width: 900px;
   text-align: center;
@@ -1169,6 +1176,7 @@ body {
   background: rgba(184, 15, 31, .08);
 }
 
+.special-modal,
 .contact-modal {
   position: fixed;
   inset: 0;
@@ -1179,10 +1187,12 @@ body {
   padding: 24px;
 }
 
+.special-modal.is-open,
 .contact-modal.is-open {
   display: flex;
 }
 
+.special-modal-backdrop,
 .contact-modal-backdrop {
   position: absolute;
   inset: 0;
@@ -1191,6 +1201,7 @@ body {
   backdrop-filter: blur(8px);
 }
 
+.special-modal-dialog,
 .contact-modal-dialog {
   position: relative;
   width: min(980px, 100%);
@@ -1206,6 +1217,7 @@ body {
   outline: none;
 }
 
+.special-modal-content,
 .contact-modal-content {
   width: min(560px, 100%);
   min-height: inherit;
@@ -1292,6 +1304,7 @@ body {
   background: rgba(255, 255, 255, .12);
 }
 
+.special-modal-close,
 .contact-modal-close {
   position: absolute;
   top: 18px;
@@ -1302,6 +1315,8 @@ body {
   box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
 }
 
+.special-modal-close:hover,
+.special-modal-close:focus-visible,
 .contact-modal-close:hover,
 .contact-modal-close:focus-visible {
   transform: scale(1.05);
@@ -1382,31 +1397,31 @@ body.modal-open {
 /* 2026-06 update: services page summer deals hero */
 .summer-deals-section {
   padding: clamp(2.75rem, 6vw, 5.25rem) 0 clamp(3.25rem, 7vw, 6rem);
-  background:
-    radial-gradient(circle at 12% 12%, rgba(255, 180, 60, .38), transparent 28%),
-    radial-gradient(circle at 82% 18%, rgba(225, 29, 47, .18), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #f4f6fb 100%);
   border-bottom: 1px solid #e1e5ee;
 }
 
 .summer-deal-card {
-  position: relative;
-  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   gap: clamp(1.25rem, 4vw, 3rem);
   align-items: center;
   padding: clamp(1.4rem, 4vw, 3.2rem);
-  border-radius: 34px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, .97), rgba(255, 255, 255, .9)),
     radial-gradient(circle at 80% 12%, rgba(255, 122, 0, .24), transparent 30%);
   color: var(--dark-text);
   border: 1px solid rgba(16, 24, 40, .10);
   box-shadow: 0 28px 90px rgba(16, 24, 40, .14);
+  overflow-y: auto;
 }
 
-.summer-deal-card::before {
+.summer-deal-card-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+}
+
+.summer-deal-card-container::before {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
@@ -1695,7 +1710,7 @@ body.modal-open {
   }
 
   .contact-modal-content {
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: none;
     min-height: unset;
     height: calc(100vh - 50px);
@@ -1783,7 +1798,7 @@ body.modal-open {
   }
 
   .summer-deal-card h1 {
-    font-size: clamp(3rem, 18vw, 4.8rem);
+    font-size: clamp(3rem, 18vw, 3rem);
   }
 
   .summer-actions {

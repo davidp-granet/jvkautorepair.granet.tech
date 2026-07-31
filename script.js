@@ -35,6 +35,8 @@ if (mailForm) {
   });
 }
 
+// Contact modal
+
 const contactModal = document.querySelector('[data-contact-modal]');
 const contactOpeners = document.querySelectorAll('[data-contact-open]');
 const contactClosers = document.querySelectorAll('[data-contact-close]');
@@ -109,5 +111,84 @@ document.addEventListener('click', event => {
 window.addEventListener('DOMContentLoaded', () => {
   if (window.location.hash === '#contact') {
     openContactModal();
+  }
+});
+
+// Special modal
+
+const specialModal = document.querySelector('[data-special-modal]');
+const specialOpeners = document.querySelectorAll('[data-special-open]');
+const specialClosers = document.querySelectorAll('[data-special-close]');
+let specialModalLastFocus = null;
+
+function openSpecialModal() {
+  if (!specialModal) return;
+  specialModalLastFocus = document.activeElement;
+  specialModal.classList.add('is-open');
+  specialModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  const dialog = specialModal.querySelector('.special-modal-dialog');
+  if (dialog) dialog.focus();
+}
+
+function closeSpecialModal() {
+  if (!specialModal) return;
+  specialModal.classList.remove('is-open');
+  specialModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  if (window.location.hash === '#special') {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+  if (specialModalLastFocus && typeof specialModalLastFocus.focus === 'function') specialModalLastFocus.focus();
+}
+
+specialOpeners.forEach((opener) => {
+  opener.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (links && links.classList.contains('is-open')) {
+      links.classList.remove('is-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+    if (window.location.hash !== '#special') {
+      history.replaceState(null, '', '#special');
+    }
+    openSpecialModal();
+  });
+});
+
+specialClosers.forEach((closer) => closer.addEventListener('click', closeSpecialModal));
+specialClosers.forEach((closer) => closer.addEventListener('keydown', event => {
+  if ((event.key === 'Enter' || event.key === ' ') && specialModal && specialModal.classList.contains('is-open')) {
+    event.preventDefault();
+    closeSpecialModal();
+  }
+}));
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && specialModal && specialModal.classList.contains('is-open')) {
+    closeSpecialModal();
+  }
+});
+
+document.addEventListener('click', event => {
+  const navMenu = document.querySelector('.nav-links.is-open');
+  if (navMenu) {
+    /** @type {HTMLElement} */
+    let element;
+    for (element = event.target; element !== document.body; element = element.parentElement) {
+      if (event.target === navMenu) {
+        return;
+      }
+    }
+
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', false);
+  }
+});
+
+// Open the special modal from /index.html#special or any same-page #special link.
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash === '#special') {
+    openSpecialModal();
   }
 });
