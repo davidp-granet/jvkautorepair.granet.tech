@@ -1199,7 +1199,7 @@ body {
   background: rgba(184, 15, 31, .08);
 }
 
-.special-modal,
+.seasonal-modal,
 .contact-modal {
   position: fixed;
   inset: 0;
@@ -1210,12 +1210,12 @@ body {
   padding: 24px;
 }
 
-.special-modal.is-open,
+.seasonal-modal.is-open,
 .contact-modal.is-open {
   display: flex;
 }
 
-.special-modal-backdrop,
+.seasonal-modal-backdrop,
 .contact-modal-backdrop {
   position: absolute;
   inset: 0;
@@ -1224,7 +1224,7 @@ body {
   backdrop-filter: blur(8px);
 }
 
-.special-modal-dialog,
+.seasonal-modal-dialog,
 .contact-modal-dialog {
   position: relative;
   width: min(980px, 100%);
@@ -1240,7 +1240,7 @@ body {
   outline: none;
 }
 
-.special-modal-content,
+.seasonal-modal-content,
 .contact-modal-content {
   width: min(560px, 100%);
   min-height: inherit;
@@ -1327,7 +1327,7 @@ body {
   background: rgba(255, 255, 255, .12);
 }
 
-.special-modal-close,
+.seasonal-modal-close,
 .contact-modal-close {
   position: absolute;
   top: 18px;
@@ -1338,8 +1338,8 @@ body {
   box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
 }
 
-.special-modal-close:hover,
-.special-modal-close:focus-visible,
+.seasonal-modal-close:hover,
+.seasonal-modal-close:focus-visible,
 .contact-modal-close:hover,
 .contact-modal-close:focus-visible {
   transform: scale(1.05);

@@ -114,35 +114,35 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Special modal
+// Seasonal modal
 
-const specialModal = document.querySelector('[data-special-modal]');
-const specialOpeners = document.querySelectorAll('[data-special-open]');
-const specialClosers = document.querySelectorAll('[data-special-close]');
-let specialModalLastFocus = null;
+const seasonalModal = document.querySelector('[data-seasonal-modal]');
+const seasonalOpeners = document.querySelectorAll('[data-seasonal-open]');
+const seasonalClosers = document.querySelectorAll('[data-seasonal-close]');
+let seasonalModalLastFocus = null;
 
-function openSpecialModal() {
-  if (!specialModal) return;
-  specialModalLastFocus = document.activeElement;
-  specialModal.classList.add('is-open');
-  specialModal.setAttribute('aria-hidden', 'false');
+function openSeasonalModal() {
+  if (!seasonalModal) return;
+  seasonalModalLastFocus = document.activeElement;
+  seasonalModal.classList.add('is-open');
+  seasonalModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
-  const dialog = specialModal.querySelector('.special-modal-dialog');
+  const dialog = seasonalModal.querySelector('.seasonal-modal-dialog');
   if (dialog) dialog.focus();
 }
 
-function closeSpecialModal() {
-  if (!specialModal) return;
-  specialModal.classList.remove('is-open');
-  specialModal.setAttribute('aria-hidden', 'true');
+function closeSeasonalModal() {
+  if (!seasonalModal) return;
+  seasonalModal.classList.remove('is-open');
+  seasonalModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
   if (window.location.hash === '#seasonal') {
     history.replaceState(null, '', window.location.pathname + window.location.search);
   }
-  if (specialModalLastFocus && typeof specialModalLastFocus.focus === 'function') specialModalLastFocus.focus();
+  if (seasonalModalLastFocus && typeof seasonalModalLastFocus.focus === 'function') seasonalModalLastFocus.focus();
 }
 
-specialOpeners.forEach((opener) => {
+seasonalOpeners.forEach((opener) => {
   opener.addEventListener('click', (event) => {
     event.preventDefault();
     if (links && links.classList.contains('is-open')) {
@@ -152,21 +152,21 @@ specialOpeners.forEach((opener) => {
     if (window.location.hash !== '#seasonal') {
       history.replaceState(null, '', '#seasonal');
     }
-    openSpecialModal();
+    openSeasonalModal();
   });
 });
 
-specialClosers.forEach((closer) => closer.addEventListener('click', closeSpecialModal));
-specialClosers.forEach((closer) => closer.addEventListener('keydown', event => {
-  if ((event.key === 'Enter' || event.key === ' ') && specialModal && specialModal.classList.contains('is-open')) {
+seasonalClosers.forEach((closer) => closer.addEventListener('click', closeSeasonalModal));
+seasonalClosers.forEach((closer) => closer.addEventListener('keydown', event => {
+  if ((event.key === 'Enter' || event.key === ' ') && seasonalModal && seasonalModal.classList.contains('is-open')) {
     event.preventDefault();
-    closeSpecialModal();
+    closeSeasonalModal();
   }
 }));
 
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && specialModal && specialModal.classList.contains('is-open')) {
-    closeSpecialModal();
+  if (event.key === 'Escape' && seasonalModal && seasonalModal.classList.contains('is-open')) {
+    closeSeasonalModal();
   }
 });
 
@@ -186,9 +186,9 @@ document.addEventListener('click', event => {
   }
 });
 
-// Open the special modal from /index.html#seasonal or any same-page #seasonal link.
+// Open the seasonal modal from /index.html#seasonal or any same-page #seasonal link.
 window.addEventListener('DOMContentLoaded', () => {
   if (window.location.hash === '#seasonal') {
-    openSpecialModal();
+    openSeasonalModal();
   }
 });
