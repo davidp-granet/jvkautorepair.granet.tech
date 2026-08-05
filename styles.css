@@ -1091,6 +1091,14 @@ body {
   font-size: .98rem;
 }
 
+.review-card blockquote::before {
+  content: '\201C';
+}
+
+.review-card blockquote::after {
+  content: '\201D';
+}
+
 .review-card .google-icon {
   position: absolute;
   bottom: 20px;
