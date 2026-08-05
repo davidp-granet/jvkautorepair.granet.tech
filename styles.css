@@ -1230,7 +1230,6 @@ body {
   backdrop-filter: blur(8px);
 }
 
-.seasonal-modal-dialog,
 .contact-modal-dialog {
   position: relative;
   width: min(980px, 100%);
