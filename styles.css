@@ -1843,7 +1843,7 @@ body.modal-open {
   }
 
   .seasonal-container {
-    max-height: 90vh;
+    max-height: 90dvh;
   }
 
   .seasonal-modal-close {
