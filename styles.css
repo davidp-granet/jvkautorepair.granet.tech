@@ -788,7 +788,7 @@ h1 {
 }
 
 .hub-card:hover {
-  border-color: rgba(247, 196, 95, .55);
+  border-color: #aaa4;
 }
 
 .hub-card strong {
