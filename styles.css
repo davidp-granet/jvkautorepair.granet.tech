@@ -558,7 +558,6 @@ h1 {
 }
 
 .action-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(247, 196, 95, .45);
 }
 
@@ -789,7 +788,6 @@ h1 {
 }
 
 .hub-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(247, 196, 95, .55);
 }
 
@@ -1851,6 +1849,14 @@ body.modal-open {
     top: 40px;
     right: 60px;
   }
+}
+
+.move-up-on-hover {
+  transition: transform .18s ease;
+}
+
+.move-up-on-hover:hover {
+  transform: translateY(-4px);
 }
 
 a.granet-link {
