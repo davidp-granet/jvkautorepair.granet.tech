@@ -86,8 +86,6 @@ textarea {
 .seasonal-container {
   width: min(var(--max), calc(100% - 40px));
   max-height: calc(100dvh - 40px);
-  overflow-y: auto;
-  scrollbar-width: none;
   margin-inline: auto;
   border-radius: 34px;
 }
@@ -1346,14 +1344,6 @@ body {
   box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
 }
 
-.seasonal-modal-close {
-  position: sticky;
-  inset: 0;
-  top: 60px;
-  right: 15px;
-  margin-left: auto;
-}
-
 .seasonal-modal-close:hover,
 .seasonal-modal-close:focus-visible,
 .contact-modal-close:hover,
@@ -1452,6 +1442,8 @@ body.modal-open {
   border: 1px solid rgba(16, 24, 40, .10);
   box-shadow: 0 28px 90px rgba(16, 24, 40, .14);
   overflow-y: auto;
+  scrollbar-width: none;
+  max-height: 90dvh;
 }
 
 .summer-deal-card-container {
@@ -1850,12 +1842,6 @@ body.modal-open {
 
   .seasonal-container {
     max-height: 90dvh;
-  }
-
-  .seasonal-modal-close {
-    position: absolute;
-    top: 40px;
-    right: 60px;
   }
 }
 
