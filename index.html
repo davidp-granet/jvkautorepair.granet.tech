@@ -8,7 +8,9 @@
   <meta property="og:title" content="JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul">
   <meta property="og:description" content="Schedule service, reserve U-Haul, browse JVK Auto used vehicles, and view repair services from one customer-friendly page.">
   <meta property="og:type" content="website">
-  <link rel="preload" as="image" href="/assets/jvk-mountain-banner.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/seasonal/jvk-mountain-banner.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/seasonal/summer-time-1-q80.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/seasonal/summer-time-2-q80.webp" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/css/jvk-messenger-button.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +50,29 @@
 <section class="marquee-image-hero" aria-label="JVK homepage mountain banner">
   <div class="marquee-image-link">
     <a href="#seasonal" data-seasonal-open>
-      <img src="/assets/jvk-mountain-banner.webp" alt="JVK Seasonal Banner" fetchpriority="high">
+      <img id="main-image" src="/assets/seasonal/jvk-mountain-banner.webp" alt="JVK Seasonal Banner" fetchpriority="high">
+      <script>
+        (function () {
+          const allImages = [
+            '/assets/seasonal/jvk-mountain-banner.webp',
+            '/assets/seasonal/summer-time-1-q80.webp',
+            '/assets/seasonal/summer-time-2-q80.webp'
+          ];
+
+          const allImagesCount = allImages.length;
+
+          const lastRandomNumber = parseInt(sessionStorage.getItem('lastRandomNumber'));
+
+          let randomNumber = 0;
+          do {
+            randomNumber = Math.floor(Math.random() * allImagesCount);
+          } while (randomNumber === lastRandomNumber);
+
+          document.getElementById('main-image').src = allImages[randomNumber];
+
+          sessionStorage.setItem('lastRandomNumber', randomNumber);
+        })();
+      </script>
     </a>
   </div>
 </section>
