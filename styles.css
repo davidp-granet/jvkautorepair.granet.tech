@@ -1137,6 +1137,11 @@ body {
   border-radius: var(--faq-border-radius);
 }
 
+.faq-section summary + * {
+  margin-top: var(--faq-padding);
+  border-top: lightgray solid 1px;
+}
+
 .faq-section .text-link {
   margin-top: 0;
 }
