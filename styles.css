@@ -1112,17 +1112,29 @@ body {
   flex-direction: column;
   gap: 20px;
   margin-top: 40px;
+
+  --faq-padding: 20px;
+  --faq-border-radius: 25px;
 }
 
 .faq-section details {
   font-size: 20px;
   background-color: white;
-  padding: 20px;
-  border-radius: 25px;
+  padding: var(--faq-padding);
+  border-radius: var(--faq-border-radius);
 }
 
 .faq-section summary {
+  position: relative;
   cursor: pointer;
+}
+
+.faq-section summary::before {
+  content: '';
+  position: absolute;
+  inset: calc(var(--faq-padding) * -1);
+  padding: var(--faq-padding);
+  border-radius: var(--faq-border-radius);
 }
 
 .faq-section .text-link {
