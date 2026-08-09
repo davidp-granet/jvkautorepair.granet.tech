@@ -1217,7 +1217,6 @@ body {
   border: 0;
   background: white;
   color: black;
-  font: inherit;
   font-weight: 850;
   cursor: pointer;
   padding: .65rem .8rem;
