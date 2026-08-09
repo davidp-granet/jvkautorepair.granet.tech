@@ -120,6 +120,26 @@ textarea {
   gap: 1rem;
 }
 
+.navbar-image {
+  /* Copied from brand */
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  min-width: max-content;
+  /* End: Copied from brand */
+
+  background-color: black;
+  font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: white;
+  height: 75px;
+  line-height: 1;
+  font-size: 32px;
+  gap: 0;
+  text-align: left;
+  padding: 0 20px;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
