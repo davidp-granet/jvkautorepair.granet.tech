@@ -8,9 +8,6 @@
   <meta property="og:title" content="JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul">
   <meta property="og:description" content="Schedule service, reserve U-Haul, browse JVK Auto used vehicles, and view repair services from one customer-friendly page.">
   <meta property="og:type" content="website">
-  <link rel="preload" as="image" href="/assets/seasonal/jvk-mountain-banner.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="/assets/seasonal/summer-time-1-q80.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="/assets/seasonal/summer-time-2-q80.webp" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/css/jvk-messenger-button.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,6 +75,9 @@
             randomNumber = Math.floor(Math.random() * allImagesCount);
           } while (randomNumber === lastRandomNumber);
 
+          document.head.insertAdjacentHTML('beforeEnd', `
+            <link rel="preload" as="image" href="${allImages[randomNumber]}" fetchpriority="high">
+          `);
           document.getElementById('main-image').src = allImages[randomNumber];
 
           sessionStorage.setItem('lastRandomNumber', randomNumber);
