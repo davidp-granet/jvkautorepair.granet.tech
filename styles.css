@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 body {
@@ -117,6 +118,20 @@ textarea {
   gap: 1rem;
 }
 
+.navbar-image {
+  /* Copied from brand */
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  min-width: max-content;
+  /* End: Copied from brand */
+
+  background-color: black;
+  height: 75px;
+  gap: 0;
+  padding: 0 20px;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -137,17 +152,13 @@ textarea {
   margin-top: -.15rem;
 }
 
+.service-nav-links,
 .nav-links {
   display: flex;
   align-items: center;
   gap: 1.05rem;
   color: var(--muted);
   font-weight: 800;
-}
-
-.nav-links a:not(.btn):hover,
-.nav-links a.active {
-  color: #fff;
 }
 
 .nav-toggle {
@@ -859,9 +870,25 @@ body {
   background: var(--bg);
 }
 
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
 .site-header {
-  background: rgba(255, 255, 255, .92);
-  box-shadow: 0 10px 30px rgba(16, 24, 40, .06);
+  background: white;
+  background: url('/assets/dave-sherrill-48elRjHbXRY-unsplash-q75.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  box-shadow: 0px 10px 30px black;
 }
 
 .topbar {
@@ -881,16 +908,13 @@ body {
   gap: .75rem;
 }
 
+.service-nav-links,
 .nav-links {
   gap: .65rem;
   color: var(--dark-muted);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   justify-content: flex-end;
-}
-
-.nav-links a:not(.btn):hover,
-.nav-links a.active {
-  color: var(--red);
 }
 
 .nav-links .btn {
@@ -1193,20 +1217,21 @@ body {
 .nav-contact-button {
   appearance: none;
   border: 0;
-  background: transparent;
-  color: inherit;
+  background: white;
+  color: black;
   font: inherit;
   font-weight: 850;
   cursor: pointer;
   padding: .65rem .8rem;
   border-radius: 999px;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .nav-contact-button:hover,
 .nav-contact-button:focus-visible {
-  color: var(--red);
-  outline: none;
-  background: rgba(184, 15, 31, .08);
+  background: white;
+  color: black;
+  transform: translateY(-2px);
 }
 
 .seasonal-modal,
@@ -1370,10 +1395,6 @@ body.modal-open {
 
 .btn-ghost:hover,
 .btn-ghost:focus-visible {
-  /* color: #ffffff !important; */
-  /* background: linear-gradient(135deg, #111827, #374151); */
-  /* border-color: transparent; */
-
   box-shadow: 0 10px 26px rgba(16, 24, 40, .08);
 }
 
@@ -1445,8 +1466,8 @@ body.modal-open {
   border: 1px solid rgba(16, 24, 40, .10);
   box-shadow: 0 28px 90px rgba(16, 24, 40, .14);
   overflow-y: auto;
-  scrollbar-width: none;
   max-height: 90dvh;
+  --custom-scrollbar-top-bottom-margin: 50px;
 }
 
 .summer-deal-card-container {
@@ -1585,6 +1606,85 @@ body.modal-open {
   transform: none;
 }
 
+.service-nav-links {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    min-height: 70px;
+  }
+
+  .nav-toggle {
+    display: inline-grid;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    place-content: center;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .05);
+    cursor: pointer;
+  }
+
+  .nav-toggle span.burger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+  }
+
+  .service-nav-links {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    top: 75px;
+    display: none;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: rgba(8, 9, 12, .98);
+    box-shadow: var(--shadow);
+    max-height: calc(100dvh - 75px);
+    overflow-y: auto;
+  }
+
+  .nav-links.is-open {
+    display: grid;
+  }
+
+  .nav-links a {
+    padding: .65rem .8rem;
+  }
+
+  .nav-toggle {
+    border-color: #d7dce7;
+    background: #fff;
+  }
+
+  .nav-toggle span.burger-line {
+    background: var(--dark-text);
+  }
+
+  .nav-links {
+    background: #fff;
+    border-color: #e1e5ee;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links > .nav-contact-button {
+    color: var(--dark-text);
+    text-align: center;
+    border: solid lightgray 1px;
+  }
+}
+
 @media (max-width: 1150px) {
   .link-hub-grid,
   .services-list-grid {
@@ -1642,51 +1742,6 @@ body.modal-open {
     display: none;
   }
 
-  .nav {
-    min-height: 70px;
-  }
-
-  .nav-toggle {
-    display: inline-grid;
-    gap: 5px;
-    width: 44px;
-    height: 44px;
-    place-content: center;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, .05);
-  }
-
-  .nav-toggle span:not(.sr-only) {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #fff;
-  }
-
-  .nav-links {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 75px;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: rgba(8, 9, 12, .98);
-    box-shadow: var(--shadow);
-  }
-
-  .nav-links.is-open {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: .65rem .8rem;
-  }
-
   h1 {
     font-size: clamp(2.75rem, 13vw, 5rem);
   }
@@ -1702,27 +1757,6 @@ body.modal-open {
   .cta-inner {
     display: grid;
   }
-
-  .nav-toggle {
-    border-color: #d7dce7;
-    background: #fff;
-  }
-
-  .nav-toggle span:not(.sr-only) {
-    background: var(--dark-text);
-  }
-
-  .nav-links {
-    background: #fff;
-    border-color: #e1e5ee;
-    box-shadow: var(--shadow);
-  }
-
-  .nav-links>.nav-contact-button {
-    color: var(--dark-text);
-    text-align: center;
-    border: solid lightgray 1px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -1732,6 +1766,18 @@ body.modal-open {
 
   .team-card {
     min-height: unset;
+  }
+}
+
+@media (max-width: 830px) {
+  .service-nav-links > :first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 725px) {
+  .service-nav-links {
+    display: none;
   }
 }
 
@@ -1749,7 +1795,6 @@ body.modal-open {
 
   .contact-modal-content {
     overflow-y: auto;
-    scrollbar-width: none;
     min-height: unset;
     height: calc(100dvh - 50px);
     padding: 5.5rem 1.2rem 1.4rem;
@@ -1846,6 +1891,33 @@ body.modal-open {
   .seasonal-container {
     max-height: 90dvh;
   }
+}
+
+/* Custom scrollbar */
+
+.custom-scrollbar {
+  --custom-scrollbar-color: #444c;
+}
+
+@-moz-document url-prefix() {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--custom-scrollbar-color) transparent;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  margin: var(--custom-scrollbar-top-bottom-margin, 25px) 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+	width: 2px;
+	background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background-color: var(--custom-scrollbar-color);
+  border-radius: 2px;
 }
 
 .move-up-on-hover {

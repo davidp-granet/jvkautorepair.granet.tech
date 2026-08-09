@@ -8,9 +8,8 @@
   <meta property="og:title" content="JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul">
   <meta property="og:description" content="Schedule service, reserve U-Haul, browse JVK Auto used vehicles, and view repair services from one customer-friendly page.">
   <meta property="og:type" content="website">
-  <link rel="preload" as="image" href="/assets/seasonal/jvk-mountain-banner.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="/assets/seasonal/summer-time-1-q80.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="/assets/seasonal/summer-time-2-q80.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/jvk-auto.svg" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/Steel-Man-Half-v2-q80.webp" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/css/jvk-messenger-button.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,16 +26,27 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" data-header="">
   <nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="/" aria-label="JVK Auto Service &amp; Sales home">
-      <img src="/assets/logo-1.png" alt="" width="180px">
-
+    <a class="navbar-image" href="/" aria-label="JVK Auto Service &amp; Sales home">
+      <img src="/assets/Steel-Man-Half-v2-q80.webp" alt="" height="75" width="93.578">
+      <img src="/assets/jvk-auto.svg" alt="JVK AUTO" height="64" width="90.156">
     </a>
+    <div class="service-nav-links">
+      <button class="nav-contact-button" type="button" data-contact-open="">Contact Us</button>
+      <a class="btn btn-small btn-sales" href="https://www.jvkautos.com/cars-for-sale" target="_blank" rel="noopener">Browse Used Cars</a>
+      <a class="btn btn-small btn-uhaul" href="https://www.uhaul.com/Locations/Truck-Rentals-near-Derry-NH-03038/037572/" target="_blank" rel="noopener">U-Haul</a>
+      <a class="btn btn-small" href="https://myalp.io/nuatgx" target="_blank" rel="noopener">Book Service</a>
+    </div>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle="">
-      <span class="sr-only">Open navigation</span><span></span><span></span><span></span>
+      <span class="sr-only">Open navigation</span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
     </button>
-    <div class="nav-links" id="nav-links" data-nav-links="">
+    <div class="nav-links custom-scrollbar" id="nav-links" data-nav-links="">
       <a class="nav-contact-button" href="/">Home</a>
       <a class="nav-contact-button" href="#services">Services</a>
+      <a class="nav-contact-button" href="#reviews">Reviews</a>
+      <a class="nav-contact-button" href="#faq">FAQ</a>
       <!-- <button class="nav-contact-button" type="button" data-seasonal-open="">Seasonal</button> -->
       <button class="nav-contact-button" type="button" data-contact-open="">Contact Us</button>
       <a class="btn btn-small btn-sales" href="https://www.jvkautos.com/cars-for-sale" target="_blank" rel="noopener">Browse Used Cars</a>
@@ -68,6 +78,9 @@
             randomNumber = Math.floor(Math.random() * allImagesCount);
           } while (randomNumber === lastRandomNumber);
 
+          document.head.insertAdjacentHTML('beforeEnd', `
+            <link rel="preload" as="image" href="${allImages[randomNumber]}" fetchpriority="high">
+          `);
           document.getElementById('main-image').src = allImages[randomNumber];
 
           sessionStorage.setItem('lastRandomNumber', randomNumber);
@@ -180,8 +193,32 @@
       <a href="https://maps.app.goo.gl/g5YZFtEYWosumy7m7" class="move-up-on-hover reveal delay-1 is-visible" target="_blank" rel="noopener">
         <article class="review-card">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>John has taken care of my family&rsquo;s cars for 8 years now and he&rsquo;s never steered me wrong. Anything he&rsquo;s quoted always comes in lower and I trust him with my safety. You can see them working on your car from the waiting room and they don&rsquo;t skip any steps.</blockquote>
+          <blockquote>Jon has taken care of my family&rsquo;s cars for 8 years now and he&rsquo;s never steered me wrong. Anything he&rsquo;s quoted always comes in lower and I trust him with my safety. You can see them working on your car from the waiting room and they don&rsquo;t skip any steps.</blockquote>
           <p class="review-name">Cassidy H.</p>
+          <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
+        </article>
+      </a>
+      <a href="https://maps.app.goo.gl/hv4XniTTRuRz7tgA9" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>I was referred by another shop to go to JVK. Jon and his team were very helpful and quick to repair my car within 1 day of dropping it off after another shop couldn&rsquo;t repair it. Jon is honest and his work is quality. I will be going back to JVK for all of my repairs.</blockquote>
+          <p class="review-name">Rob B.</p>
+          <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
+        </article>
+      </a>
+      <a href="https://maps.app.goo.gl/DXiKQEt4jF6x9hdA9" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>I am a COVID Nurse who travels. I rely on a car that will be reliable and ready to take me to work. I called and received a free estimate performed in a very TIMELY polite manner. Jim &amp; Jon run a tight ship, great customer service, friendly and what I rarely see TRUSTWORTHY.</blockquote>
+          <p class="review-name">Ally B.</p>
+          <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
+        </article>
+      </a>
+      <a href="https://maps.app.goo.gl/Yke86MBABkaRjiPQ7" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Very professional and straightforward answers. Have tried 3-4 other places for the same issue and no one gave me a straight answer or how much that will cost me. Five stars is at least I can do. This is my place for my cars.</blockquote>
+          <p class="review-name">Laci K.</p>
           <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
         </article>
       </a>
@@ -193,19 +230,35 @@
           <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
         </article>
       </a>
-      <a href="https://maps.app.goo.gl/DXiKQEt4jF6x9hdA9" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
+      <a href="https://maps.app.goo.gl/H8RbjDcCFNuHT1nRA" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
         <article class="review-card">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>I am a COVID Nurse who travels. I rely on a car that will be reliable and ready to take me to work. I called and received a free estimate performed in a very TIMELY polite manner. Jim &amp; John run a tight ship, great customer service, friendly and what I rarely see TRUSTWORTHY.</blockquote>
-          <p class="review-name">Ally B.</p>
+          <blockquote>JVK Auto is a great place to take your car. They are upfront and honest about your repairs and what needs to be fixed and are reasonably priced. They are the best place in the area to take your vehicle for repairs.</blockquote>
+          <p class="review-name">Valorie B.</p>
           <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
         </article>
       </a>
+      <a href="https://maps.app.goo.gl/t3BhpUZtEcEuTnSR6" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>I received very fast, same day service, despite them being shorthanded. Their focus is on the most sensible solution for their customers. No unnecessary costs and great service, explaining the issue and the solution very concisely.</blockquote>
+          <p class="review-name">Brett H.</p>
+          <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
+        </article>
+      </a>
+      <!-- <a href="https://maps.app.goo.gl/XvANc6T2yYZPXKfVA" class="move-up-on-hover reveal is-visible" target="_blank" rel="noopener">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>Great service and professionalism! JVK provides excellent customer service—reliable, responsive, and always goes above and beyond to make sure everything is done right. I appreciate their attention to detail and how easy they make the entire process. Highly recommend them to anyone looking for quality and trustworthiness!</blockquote>
+          <p class="review-name">Robert F.</p>
+          <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
+        </article>
+      </a> -->
     </div>
   </div>
 </section>
 
-<section class="section faq-section">
+<section class="section faq-section" id="faq">
   <div class="container">
     <div class="section-head reveal is-visible">
 
@@ -352,7 +405,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <a class="footer-brand" href="/"><img src="/assets/logo-1.png" alt="" height="48"><strong>JVK Auto Service &amp; Sales</strong></a>
+      <a class="footer-brand" href="/"><img src="/assets/logo-1-q60.webp" alt="" height="48" width="114.670"><strong>JVK Auto Service &amp; Sales</strong></a>
       <p>Auto repair, used vehicles, financing, and U-Haul rentals from one local Derry, New Hampshire shop.</p>
     </div>
     <div>
@@ -380,7 +433,7 @@
   <div class="contact-modal-backdrop" data-contact-close></div>
   <section class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" tabindex="-1">
     <img src="/assets/svg/close-button.svg" alt="x" class="contact-modal-close" aria-label="Close contact information" role="button" tabindex="0" data-contact-close>
-    <div class="contact-modal-content">
+    <div class="contact-modal-content custom-scrollbar">
       <p class="eyebrow">Contact JVK</p>
       <h2 id="contact-modal-title">JVK Auto Service &amp; Sales</h2>
       <p class="contact-modal-intro">6 Folsom Rd, Derry, NH 03038</p>
@@ -412,7 +465,7 @@
     <div class="seasonal-container">
       <div class="summer-deal-card-container">
         <img src="/assets/svg/close-button.svg" alt="x" class="seasonal-modal-close" aria-label="Close seasonal information" role="button" tabindex="0" data-seasonal-close>
-        <div class="summer-deal-card">
+        <div class="summer-deal-card custom-scrollbar">
           <div class="summer-deal-copy">
             <p class="eyebrow">Seasonal Service Special</p>
             <h1>SUMMER IS HERE</h1>
