@@ -1466,8 +1466,8 @@ body.modal-open {
   border: 1px solid rgba(16, 24, 40, .10);
   box-shadow: 0 28px 90px rgba(16, 24, 40, .14);
   overflow-y: auto;
-  scrollbar-width: none;
   max-height: 90dvh;
+  --custom-scrollbar-top-bottom-margin: 50px;
 }
 
 .summer-deal-card-container {
@@ -1789,7 +1789,6 @@ body.modal-open {
 
   .contact-modal-content {
     overflow-y: auto;
-    scrollbar-width: none;
     min-height: unset;
     height: calc(100dvh - 50px);
     padding: 5.5rem 1.2rem 1.4rem;
@@ -1886,6 +1885,33 @@ body.modal-open {
   .seasonal-container {
     max-height: 90dvh;
   }
+}
+
+/* Custom scrollbar */
+
+.custom-scrollbar {
+  --custom-scrollbar-color: #444c;
+}
+
+@-moz-document url-prefix() {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--custom-scrollbar-color) transparent;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  margin: var(--custom-scrollbar-top-bottom-margin, 25px) 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+	width: 2px;
+	background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background-color: var(--custom-scrollbar-color);
+  border-radius: 2px;
 }
 
 .move-up-on-hover {
