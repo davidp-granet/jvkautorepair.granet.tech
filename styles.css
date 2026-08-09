@@ -724,8 +724,6 @@ h1 {
 
 .marquee-image-hero {
   width: 100%;
-  background: #050608;
-  border-bottom: 1px solid var(--line);
 }
 
 .marquee-image-link {

@@ -29,3 +29,8 @@
 .nav-links a.active {
   color: #fff;
 }
+
+.marquee-image-hero {
+  background: #050608;
+  border-bottom: 1px solid var(--line);
+}
