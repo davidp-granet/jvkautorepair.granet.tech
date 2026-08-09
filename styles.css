@@ -1769,6 +1769,12 @@ body.modal-open {
   }
 }
 
+@media (max-width: 830px) {
+  .service-nav-links > :first-child {
+    display: none;
+  }
+}
+
 @media (max-width: 725px) {
   .service-nav-links {
     display: none;
