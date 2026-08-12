@@ -86,27 +86,34 @@
       <img id="main-image" src="/assets/seasonal/jvk-mountain-banner.webp" alt="JVK Seasonal Banner" fetchpriority="high">
       <script>
         (function () {
-          const allImages = [
-            '/assets/seasonal/jvk-mountain-banner.webp',
-            '/assets/seasonal/summer-time-1-q80.webp',
-            '/assets/seasonal/summer-time-2-q80.webp'
-          ];
+          function updateBannerImage(firstRun = false) {
+            const allImages = [
+              '/assets/seasonal/jvk-mountain-banner.webp',
+              '/assets/seasonal/summer-time-1-q80.webp',
+              '/assets/seasonal/summer-time-2-q80.webp'
+            ];
 
-          const allImagesCount = allImages.length;
+            const allImagesCount = allImages.length;
 
-          const lastRandomNumber = parseInt(sessionStorage.getItem('lastRandomNumber'));
+            const lastRandomNumber = parseInt(sessionStorage.getItem('lastRandomNumber'));
 
-          let randomNumber = 0;
-          do {
-            randomNumber = Math.floor(Math.random() * allImagesCount);
-          } while (randomNumber === lastRandomNumber);
+            let randomNumber = 0;
+            do {
+              randomNumber = Math.floor(Math.random() * allImagesCount);
+            } while (randomNumber === lastRandomNumber);
 
-          document.head.insertAdjacentHTML('beforeEnd', `
-            <link rel="preload" as="image" href="${allImages[randomNumber]}" fetchpriority="high">
-          `);
-          document.getElementById('main-image').src = allImages[randomNumber];
+            if (firstRun) {
+              document.head.insertAdjacentHTML('beforeEnd', `
+                <link rel="preload" as="image" href="${allImages[randomNumber]}" fetchpriority="high">
+              `);
+            }
+            document.getElementById('main-image').src = allImages[randomNumber];
 
-          sessionStorage.setItem('lastRandomNumber', randomNumber);
+            sessionStorage.setItem('lastRandomNumber', randomNumber);
+          }
+
+          setInterval(updateBannerImage, 30_000);
+          updateBannerImage(true);
         })();
       </script>
     </a>
