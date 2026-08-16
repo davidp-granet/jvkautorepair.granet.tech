@@ -1453,7 +1453,7 @@ body.modal-open {
 
 .summer-deal-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(1.25rem, 4vw, 3rem);
   align-items: center;
   padding: clamp(1.4rem, 4vw, 3.2rem);
@@ -1488,7 +1488,9 @@ body.modal-open {
 }
 
 .summer-deal-copy > :first-child {
-  margin-top: 50px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-right: 55px;
 }
 
 .summer-deal-card h1 {
@@ -1499,6 +1501,10 @@ body.modal-open {
   line-height: .86;
   letter-spacing: -.085em;
   text-transform: uppercase;
+}
+
+.summer-deal-card img {
+  margin: 1rem 0;
 }
 
 .summer-lead {
