@@ -1888,12 +1888,12 @@ body.modal-open {
     font-size: clamp(3rem, 18vw, 3rem);
   }
 
-  .summer-actions {
-    display: grid;
-  }
-
   .seasonal-container {
     max-height: 90dvh;
+  }
+
+  .seasonal-modal {
+    padding: 0;
   }
 }
 
