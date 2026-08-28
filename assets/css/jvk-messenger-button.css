@@ -7,10 +7,14 @@
  */
 
 .jvk-messenger-button {
-  position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 9999;
+
+  position: sticky;
+  transform: translateX(-16px);
+  margin-bottom: 16px;
+  left: 100%;
 
   display: inline-flex;
   align-items: center;
