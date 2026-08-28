@@ -12,7 +12,7 @@
   z-index: 9999;
 
   position: sticky;
-  transform: translateX(-16px);
+  translate: -16px 0;
   margin-bottom: 16px;
   left: 100%;
 
