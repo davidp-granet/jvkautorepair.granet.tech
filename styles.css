@@ -1248,6 +1248,15 @@ body {
   display: flex;
 }
 
+.main-backdrop:has(+ header > nav > :last-child.nav-links.is-open) {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 16, .72);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+}
+
 .seasonal-modal-backdrop,
 .contact-modal-backdrop {
   position: absolute;
