@@ -202,9 +202,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const topLinks = document.querySelectorAll('a[href="/"]');
 topLinks.forEach(elem => {
-  elem.addEventListener('click', function (event) {
+  elem.addEventListener('click', event => {
     event.preventDefault();
     scroll(0, 0);
-    history.replaceState(null, null, '/');
+    history.replaceState(null, null, new URL(location.pathname, location.origin).toString());
   });
 });
