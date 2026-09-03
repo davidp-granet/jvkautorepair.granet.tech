@@ -711,7 +711,7 @@ h1 {
 
 /* 2026-06 update: homepage banner image + direct customer routing */
 .topbar-uhaul {
-  color: var(--uhaul-orange, #ff7a00) !important;
+  color: var(--uhaul-orange) !important;
   font-weight: 950;
 }
 
@@ -721,7 +721,7 @@ h1 {
 }
 
 .nav-uhaul::after {
-  background: #ff7a00 !important;
+  background: var(--uhaul-orange) !important;
 }
 
 .marquee-image-hero {
@@ -829,7 +829,7 @@ h1 {
 
 .btn-uhaul,
 .hub-uhaul .btn {
-  background: #ff7a00;
+  background: var(--uhaul-orange);
   color: #160800;
   box-shadow: 0 15px 45px rgba(255, 122, 0, .28);
 }
@@ -929,7 +929,7 @@ body {
 }
 
 .btn-uhaul {
-  background: linear-gradient(135deg, #ff7a00, #ff9f1c);
+  background: linear-gradient(135deg, var(--uhaul-orange), #ff9f1c);
   color: #1f1300 !important;
   box-shadow: 0 12px 34px rgba(255, 122, 0, .25);
 }
@@ -1349,7 +1349,7 @@ body {
 }
 
 .uhaul-pill {
-  background: linear-gradient(135deg, #ff7a00, #ffb13b);
+  background: linear-gradient(135deg, var(--uhaul-orange), #ffb13b);
   color: #1f1300;
 }
 
@@ -1588,7 +1588,7 @@ body.modal-open {
   color: #ffffff;
   background:
     radial-gradient(circle at 30% 22%, rgba(255, 255, 255, .45), transparent 25%),
-    linear-gradient(135deg, #b80f1f 0%, #ff7a00 55%, #111827 100%);
+    linear-gradient(135deg, #b80f1f 0%, var(--uhaul-orange) 55%, #111827 100%);
   box-shadow: 0 24px 70px rgba(184, 15, 31, .28);
 }
 
