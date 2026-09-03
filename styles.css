@@ -473,6 +473,7 @@ h1 {
   color: var(--red-2);
   font-weight: 950;
   margin-top: 1rem;
+  width: fit-content;
 }
 
 .split-section {
@@ -671,6 +672,7 @@ h1 {
 .site-footer a {
   display: block;
   margin: .45rem 0;
+  width: fit-content;
 }
 
 .site-footer a:hover {
