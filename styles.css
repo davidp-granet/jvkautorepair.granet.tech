@@ -664,6 +664,10 @@ h1 {
   margin-bottom: .8rem;
 }
 
+.footer-brand + p {
+  margin-bottom: 0;
+}
+
 .site-footer p,
 .site-footer a {
   color: var(--muted);
