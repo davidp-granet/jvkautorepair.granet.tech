@@ -69,7 +69,7 @@
     </button>
     <div class="nav-links custom-scrollbar" id="nav-links" data-nav-links="">
       <a class="btn-small nav-contact-button" href="/">Home</a>
-      <!-- <button class="btn-small nav-contact-button" type="button" data-seasonal-open>Deals</button> -->
+      <button class="btn-small nav-contact-button" type="button" data-seasonal-open>Deals</button>
       <a class="btn-small nav-contact-button" href="#services">Services</a>
       <a class="btn-small nav-contact-button" href="#reviews">Reviews</a>
       <a class="btn-small nav-contact-button" href="#faq">FAQ</a>
@@ -84,7 +84,7 @@
 <main id="main">
 <section class="marquee-image-hero" aria-label="JVK homepage mountain banner">
   <div class="marquee-image-link">
-    <!-- <a href="#seasonal" data-seasonal-open> -->
+    <a href="#seasonal" data-seasonal-open>
       <img id="main-image" src="/assets/seasonal/fall/FALL-WEBSITE-q80.webp" alt="JVK Seasonal Banner">
       <script>
         (function () {
@@ -117,7 +117,7 @@
           updateBannerImage(true);
         })();
       </script>
-    <!-- </a> -->
+    </a>
   </div>
 </section>
 
@@ -526,50 +526,56 @@
         <img src="/assets/svg/close-button.svg" alt="x" class="seasonal-modal-close" aria-label="Close seasonal information" role="button" tabindex="0" data-seasonal-close>
         <div class="summer-deal-card custom-scrollbar">
           <div class="summer-deal-copy">
-            <!-- <p class="eyebrow">Seasonal Service Special</p> -->
-            <!-- <h1>SUMMER IS HERE</h1> -->
-
-            <h2>Seasonal Service Special</h2>
-
-            <!-- <p>New customer special: get 30% off your first repair of $100 or more!</p> -->
+            <h2>Promotional Offer:</h2>
 
             <div class="summer-actions">
               <a class="btn btn-small" href="https://myalp.io/nuatgx" target="_blank" rel="noopener">Book Service</a>
-              <a class="btn btn-small btn-ghost" href="tel:+16034212678">Call Us</a>
+              <a
+                class="btn btn-small btn-facebook"
+                style="background: #0866ff; display: flex; gap: 10px;"
+                href="https://m.me/61568771353611"
+                target="_blank"
+                rel="noopener"
+                aria-label="Message JVK Auto Service and Sales on Facebook Messenger"
+              >
+                <svg
+                  class="jvk-messenger-button__icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 2C6.477 2 2 6.145 2 11.258c0 2.914 1.454 5.514 3.728 7.212V22l3.406-1.87c.91.251 1.872.386 2.866.386 5.523 0 10-4.145 10-9.258S17.523 2 12 2Zm.994 12.468-2.547-2.718-4.972 2.718 5.469-5.806 2.609 2.718 4.91-2.718-5.469 5.806Z"
+                  />
+                </svg>
+
+                <span class="jvk-messenger-button__text">
+                  Message JVK Auto
+                </span>
+              </a>
+              <div style="display: flex; gap: inherit;">
+                <a class="btn btn-small btn-ghost" href="tel:+16034212678">Call</a>
+                <a class="btn btn-small btn-ghost" href="mailto:jvkautoservice@gmail.com">Email</a>
+                <a class="btn btn-small btn-ghost" href="https://maps.app.goo.gl/dwxkVYmWBmCTRs2DA" target="_blank" rel="noopener">Maps</a>
+              </div>
             </div>
 
-            <img src="assets/special/2026-08-06-q60.webp" alt="New customer special: get 30% off your first repair of $100 or more!">
+            <hr />
 
-            <!-- <p class="summer-lead">
-              Book now to keep your A/C cold, your cooling system healthy, and your car ready for summer traffic, beach days, and road trips.
+            <h2>Give or get up to $40 dollars on qualifying brake services</h2>
+
+            <p>
+              Your brake service can do more than keep you safe on the road. In partnership with Brakes for Breasts, customers at
+              JVK Auto Service and Sales can either receive up to a $40 rebate on a qualifying brake service or donate their rebate
+              to help fund groundbreaking breast cancer vaccine research at the Cleveland Clinic. Offer expires October 31, 2026.
             </p>
 
-            <div class="summer-deal-grid" aria-label="Featured summer services">
-              <article class="summer-mini-card">
-                <span aria-hidden="true">❄️</span>
-                <strong>A/C Recharge &amp; Performance Check</strong>
-                <p>Weak airflow, warm vents, or no cold air? Get your A/C checked before the heat gets miserable.</p>
-              </article>
-
-              <article class="summer-mini-card">
-                <span aria-hidden="true">🌡️</span>
-                <strong>Cooling System Inspection</strong>
-                <p>Coolant leaks, overheating, radiator issues, fans, hoses, and thermostat concerns.</p>
-              </article>
-
-              <article class="summer-mini-card">
-                <span aria-hidden="true">🛞</span>
-                <strong>Road Trip Safety Check</strong>
-                <p>Brakes, tires, fluids, battery, lights, belts, and the basics before a long drive.</p>
-              </article>
-            </div>
-          </div> -->
-
-          <!-- <aside class="summer-deal-badge" aria-label="Summer service focus">
-            <span aria-hidden="true">☀️</span>
-            <strong>Stay Cool</strong>
-            <small>A/C • Coolant • Tires • Brakes</small>
-          </aside> -->
+            <img
+              style="border-radius: 5%;"
+              src="assets/specials/2026/fall/2026-09-01-q75.webp"
+              alt="Give or get up to $40 dollars on qualifying brake services."
+            />
         </div>
       </div>
     </div>
