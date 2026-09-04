@@ -733,6 +733,9 @@ h1 {
   justify-content: center;
   width: 100%;
   line-height: 0;
+}
+
+.marquee-image-link > a {
   margin-top: 40px;
 }
 
