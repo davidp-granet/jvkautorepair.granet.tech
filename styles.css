@@ -893,8 +893,8 @@ body {
 }
 
 .site-header {
-  background: white;
-  background: url('/assets/dave-sherrill-48elRjHbXRY-unsplash-q75.webp');
+  background-color: white;
+  background-image: url('/assets/dave-sherrill-48elRjHbXRY-unsplash-q75.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
