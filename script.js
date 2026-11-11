@@ -265,10 +265,10 @@ function buildMessage(fields) {
 
   let promoCode = '';
   if (clean(fields.promo) !== '') {
-    promoCode = '\nPromo: ' + clean(fields.promo);
+    promoCode = '\nPromo Code: ' + clean(fields.promo);
   }
 
-  return clean(fields.message) + '\n' + promoCode + checkedItems;
+  return 'Message:\n' + clean(fields.message) + '\n' + promoCode + checkedItems;
 }
 
 function validate(payload) {
