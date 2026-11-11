@@ -56,7 +56,8 @@
       <img src="/assets/jvk-auto.svg" alt="JVK AUTO" height="64" width="90.156">
     </a>
     <div class="service-nav-links">
-      <button class="btn-small nav-contact-button" type="button" data-contact-open="">Contact Us</button>
+      <!-- <button class="btn-small nav-contact-button" type="button" data-contact-open="">Contact Us</button> -->
+      <a class="btn-small nav-contact-button" href="#contact">Contact Us</a>
       <a class="btn btn-small btn-sales" href="https://www.jvkautos.com/cars-for-sale" target="_blank" rel="noopener">Browse Used Cars</a>
       <a class="btn btn-small btn-uhaul" href="https://www.uhaul.com/Locations/Truck-Rentals-near-Derry-NH-03038/037572/" target="_blank" rel="noopener">U-Haul</a>
       <a class="btn btn-small" href="https://myalp.io/nuatgx" target="_blank" rel="noopener">Book Service</a>
@@ -73,7 +74,8 @@
       <a class="btn-small nav-contact-button" href="#services">Services</a>
       <a class="btn-small nav-contact-button" href="#reviews">Reviews</a>
       <a class="btn-small nav-contact-button" href="#faq">FAQ</a>
-      <button class="btn-small nav-contact-button" type="button" data-contact-open="">Contact Us</button>
+      <a class="btn-small nav-contact-button" href="#contact">Contact Us</a>
+      <!-- <button class="btn-small nav-contact-button" type="button" data-contact-open="">Contact Us</button> -->
       <a class="btn btn-small btn-sales" href="https://www.jvkautos.com/cars-for-sale" target="_blank" rel="noopener">Browse Used Cars</a>
       <a class="btn btn-small btn-uhaul" href="https://www.uhaul.com/Locations/Truck-Rentals-near-Derry-NH-03038/037572/" target="_blank" rel="noopener">U-Haul</a>
       <a class="btn btn-small" href="https://myalp.io/nuatgx" target="_blank" rel="noopener">Book Service</a>
@@ -285,6 +287,75 @@
           <img class="google-icon" src="assets/favicons/google-favicon.png" width="32" height="32" alt="Google Icon">
         </article>
       </a> -->
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-head reveal is-visible">
+      <p class="eyebrow">Contact</p>
+    </div>
+
+    <div class="contact-container">
+      <form class="contact-form" id="contact-form">
+
+        <div class="contact-buttons" style="display: flex; gap: inherit;">
+          <a class="btn btn-small btn-ghost" href="tel:+16034212678">📞 Call</a>
+          <a class="btn btn-small btn-ghost" href="mailto:jvkautoservice@gmail.com">✉️ Email</a>
+          <a class="btn btn-small btn-ghost" href="https://maps.app.goo.gl/dwxkVYmWBmCTRs2DA" target="_blank" rel="noopener">📍 Maps</a>
+        </div>
+
+        <div class="form-row">
+          <label class="text-label">Name:<input type="text" name="name" autocomplete="name" required></label>
+          <label class="text-label">Phone:<input type="tel" name="phone" autocomplete="tel" required></label>
+        </div>
+
+        <label class="text-label">Email:<input type="email" name="email" autocomplete="email" required></label>
+
+        <div class="website-input" aria-hidden="true">
+          <label for="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+            maxlength="256"
+          >
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-col">
+            <p class="text-label">Maintenance:</p>
+
+            <label class="checkbox-label"><input type="checkbox" name="Check_engine_light"><span>Check Engine Light Diagnosis <span class="deal">FREE</span></span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Oil_change"><span>Oil change <span class="deal">15% off</span></span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Tire_rotation"><span>Tire rotation <span class="deal">15% off</span></span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Alignment"><span>Alignment</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Brake_service"><span>Brake service <span class="deal">$50 off</span>: brake pads, rotors, and calipers</span></label>
+          </div>
+
+          <div class="form-col">
+            <p class="text-label">Winterization:</p>
+
+            <label class="checkbox-label"><input type="checkbox" name="Undercoating"><span>Undercoating</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Snow_plow_service"><span>Snow plow service</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Snow_plow_install"><span>Snow plow installations</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Winterization"><span>Winterization <span class="deal">10% off</span>: battery check, tire check, safety checks</span></label>
+          </div>
+        </div>
+
+        <label class="text-label">Promo Code:<input id="promo-code" name="promo" type="text"></label>
+        <label class="text-label">Message<textarea name="message" rows="7" required></textarea></label>
+
+        <input type="hidden" name="challenge_response" value="">
+
+        <button class="button button-primary" type="submit">Submit</button>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
