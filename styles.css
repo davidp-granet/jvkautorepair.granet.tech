@@ -1457,16 +1457,24 @@ body.modal-open {
   box-shadow: none;
 }
 
+.redirect-page-body {
+  background-image: url('assets/dave-sherrill-48elRjHbXRY-unsplash-q75.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .redirect-page {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #f5f7fb;
+  background: #f5f7fbaa;
   color: var(--dark-text);
   padding: 3rem 0;
 }
 
 .redirect-page p {
+  margin-top: 1.5rem;
   color: var(--dark-muted);
 }
 

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you from JVK Auto Service &amp; Sales</title>
+  <meta name="description" content="Thank you from JVK Auto Service & Sales" />
+  <meta http-equiv="refresh" content="10; url=/" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/jpeg" sizes="16x16" href="/assets/favicons/16x16.jpg" />
+  <link rel="icon" type="image/jpeg" sizes="32x32" href="/assets/favicons/32x32.jpg" />
+  <link rel="icon" type="image/jpeg" sizes="48x48" href="/assets/favicons/48x48.jpg" />
+  <link rel="icon" type="image/jpeg" sizes="64x64" href="/assets/favicons/64x64.jpg" />
+  <link rel="icon" type="image/jpeg" sizes="96x96" href="/assets/favicons/96x96.jpg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon_180x180.jpg" />
+</head>
+<body class="redirect-page-body">
+  <main class="redirect-page">
+    <div class="container narrow">
+      <p class="eyebrow">Thank you from JVK</p>
+      <h1>Thank you</h1>
+      <p>Redirecting to the <a class="text-link" href="/">home page</a> in <span id="redirect">10</span></p>
+    </div>
+  </main>
+  <script>
+    time = 10;
+    redirectEle = document.getElementById('redirect');
+    setTimeout(() => {
+      window.location.replace('/');
+    }, 10_000);
+    setInterval(() => {
+      redirectEle.textContent = --time;
+    }, 1000);
+  </script>
+</body>
+</html>
