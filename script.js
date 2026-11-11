@@ -214,7 +214,7 @@ topLinks.forEach(elem => {
 // Contact form
 
 const ENDPOINT =
-  "https://mercury.granet.tech/api/intake/public/95e78fd7cc0869e1c1b28098056758d5/";
+  "https://mercury.granet.tech/api/intake/public/845cd9c0f5c5b6d904ff09a8c9a4289e/";
 
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
