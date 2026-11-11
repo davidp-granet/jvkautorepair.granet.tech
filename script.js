@@ -355,6 +355,7 @@ form.addEventListener("submit", async (event) => {
     // Success: clear the form and remain on this page.
     form.reset();
     showStatus("Request received. We will follow up shortly.", "success");
+    window.location.replace('./thanks');
   } catch (error) {
     // fetch() reaches this block for network/CORS/connectivity failures.
     showStatus(
