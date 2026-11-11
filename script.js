@@ -211,6 +211,20 @@ topLinks.forEach(elem => {
   });
 });
 
+// Expiration Logic
+
+function removeExpiredElements() {
+  const now = new Date();
+  document.querySelectorAll('[expires]').forEach(el => {
+    const expires = new Date(el.getAttribute('expires') + ' 23:59:59').getTime();
+    if (!isNaN(expires) && expires < now) {
+      el.remove();
+    }
+  });
+}
+
+removeExpiredElements();
+
 // Contact form
 
 const ENDPOINT =
