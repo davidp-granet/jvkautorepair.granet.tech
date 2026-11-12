@@ -201,6 +201,7 @@ seasonalOpeners.forEach((opener) => {
     }
 
     openSeasonalModal();
+    document.querySelector('.seasonal-modal .custom-scrollbar').scrollTo(0, 0);
   });
 });
 
