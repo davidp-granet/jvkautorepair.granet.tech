@@ -169,6 +169,9 @@ function openSeasonalModal() {
 }
 
 function closeSeasonalModal() {
+  const dealImg = document.getElementById('deal-modal-img');
+  dealImg.setAttribute('src', '');
+
   if (!seasonalModal) return;
   seasonalModal.classList.remove('is-open');
   seasonalModal.setAttribute('aria-hidden', 'true');
