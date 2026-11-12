@@ -123,6 +123,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Seasonal modal
 
+const deals = {
+  'free-safety-check': {
+    'deal-modal-title': 'Free safety check',
+    'deal-modal-body': `
+      <p>
+        Heading out for Thanksgiving visits? Add a vehicle check to your holiday preparations.
+        Schedule a free safety check at JVK Auto Service & Sales. Mention this ad to receive the offer.
+        Valid November 1-30, 2026. Schedule your appointment with our team.
+      </p>
+    `,
+    'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-02-free-safety-check-q75.webp',
+    'deal-modal-image-alt': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
+    'expires': '2026/11/30'
+  },
+  'diehard-battery': {
+    'deal-modal-title': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
+    'deal-modal-body': `
+      <p>
+        It's that time of year when the temperature drops and older car batteries start failing, but JVK Auto Service and Sales can help!
+        Get up to $25 back with the purchase and installation of a qualifying DieHard battery, now through January 31, 2027.
+      </p>
+    `,
+    'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-01-q75.webp',
+    'deal-modal-image-alt': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
+    'expires': '2027/01/31'
+  }
+}
+
+currentDeal = null;
+
 const seasonalModal = document.querySelector('[data-seasonal-modal]');
 const seasonalOpeners = document.querySelectorAll('[data-seasonal-open]');
 const seasonalClosers = document.querySelectorAll('[data-seasonal-close]');
@@ -143,22 +173,33 @@ function closeSeasonalModal() {
   seasonalModal.classList.remove('is-open');
   seasonalModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
-  if (window.location.hash === '#seasonal') {
-    history.replaceState(null, '', window.location.pathname + window.location.search);
-  }
+  // if (window.location.hash === '#seasonal') {
+  //   history.replaceState(null, '', window.location.pathname + window.location.search);
+  // }
   if (seasonalModalLastFocus && typeof seasonalModalLastFocus.focus === 'function') seasonalModalLastFocus.focus();
 }
 
 seasonalOpeners.forEach((opener) => {
   opener.addEventListener('click', (event) => {
     event.preventDefault();
+
     if (links && links.classList.contains('is-open')) {
       links.classList.remove('is-open');
       if (toggle) toggle.setAttribute('aria-expanded', 'false');
     }
-    if (window.location.hash !== '#seasonal') {
-      history.replaceState(null, '', '#seasonal');
+
+    // if (window.location.hash !== '#seasonal') {
+    //   history.replaceState(null, '', '#seasonal');
+    // }
+
+    if (currentDeal !== null) {
+      document.getElementById('deal-modal-title').textContent = currentDeal['deal-modal-title'];
+      document.getElementById('deal-modal-body').innerHTML = currentDeal['deal-modal-body'];
+      const dealImg = document.getElementById('deal-modal-img');
+      dealImg.setAttribute('src', currentDeal['deal-modal-image-src']);
+      dealImg.setAttribute('alt', currentDeal['deal-modal-image-alt']);
     }
+
     openSeasonalModal();
   });
 });
@@ -194,11 +235,13 @@ document.addEventListener('click', event => {
 });
 
 // Open the seasonal modal from /index.html#seasonal or any same-page #seasonal link.
+/*
 window.addEventListener('DOMContentLoaded', () => {
   if (window.location.hash === '#seasonal') {
     openSeasonalModal();
   }
 });
+*/
 
 // End Seasonal modal
 

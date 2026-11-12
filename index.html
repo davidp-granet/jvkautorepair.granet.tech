@@ -27,6 +27,7 @@
   <link rel="preload" as="image" href="/assets/Steel-Man-Half-v2-q80.webp" fetchpriority="high">
 
   <!-- CSS -->
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css"> -->
   <link rel="stylesheet" href="styles.css">
   <link rel="preload" href="/assets/css/jvk-messenger-button.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/assets/css/jvk-messenger-button.css"></noscript>
@@ -71,7 +72,8 @@
     </button>
     <div class="nav-links custom-scrollbar" id="nav-links" data-nav-links="">
       <a class="btn-small nav-contact-button" href="/">Home</a>
-      <button class="btn-small nav-contact-button" type="button" data-seasonal-open>Deals</button>
+      <!-- <button class="btn-small nav-contact-button" type="button" data-seasonal-open>Deals</button> -->
+      <a class="btn-small nav-contact-button" href="#deals">Deals</a>
       <a class="btn-small nav-contact-button" href="#services">Services</a>
       <a class="btn-small nav-contact-button" href="#reviews">Reviews</a>
       <a class="btn-small nav-contact-button" href="#faq">FAQ</a>
@@ -88,7 +90,7 @@
 <main id="main">
 <section class="marquee-image-hero" aria-label="JVK homepage mountain banner">
   <div class="marquee-image-link">
-    <a href="#seasonal" data-seasonal-open>
+    <a href="#deals">
       <img id="main-image" src="/assets/seasonal/fall/FALL-WEBSITE-q80.webp" alt="JVK Seasonal Banner">
       <script>
         (function () {
@@ -125,13 +127,45 @@
   </div>
 </section>
 
-<section class="link-hub-section" aria-label="Primary customer actions">
+<section id="deals" class="link-hub-section" aria-label="Primary customer actions">
   <div class="container">
     <div class="link-hub-head reveal is-visible">
-      <p class="eyebrow">Our Selection of Services</p>
+      <p class="eyebrow">Weekly Deals</p>
     </div>
-    <div class="link-hub-grid">
+    <div class="link-hub-grid" >
+
+      <div expires="2026/11/30" class="deal-card move-up-on-hover" data-seasonal-open onclick="currentDeal=deals['free-safety-check']">
+        <img src="assets/specials/2026/fall/2026-11-02-free-safety-check-q75-cropped.webp" alt="Free Safety Check" style="width:100%;">
+        <div class="deal-data" style="padding: 0.01em 16px;">
+          <b style="display: block; padding-top: 0.5rem;">Free safety check</b>
+          <p>
+            Offer ends November 30th 2026<br>
+            Click for more details
+          </p>
+        </div>
+      </div>
+
+      <div expires="2027/01/31" class="deal-card move-up-on-hover" data-seasonal-open onclick="currentDeal=deals['diehard-battery']">
+        <img src="assets/specials/2026/fall/2026-11-01-q75.webp" alt="Get up to $25 back with the purchase and installation of a qualifying DieHard battery!" style="width:100%">
+        <div class="deal-data" style="padding: 0.01em 16px;">
+          <b style="display: block; padding-top: 0.5rem;">DieHard battery $25 discount</b>
+          <p>
+            Offer ends January 31st 2027<br>
+            Click for more details
+          </p>
+        </div>
+      </div>
+
+      <!-- <a class="hub-card move-up-on-hover hub-sales reveal is-visible" href="#contact">
+        <strong>Free safety check</strong>
+        <small>Click for more details.</small>
+      </a>
       <a class="hub-card move-up-on-hover hub-sales reveal is-visible" href="#contact">
+        <img src="assets/specials/2026/fall/2026-11-01-q75.webp" alt="" style="width:100%">
+        <small>Click for more details.</small>
+      </a> -->
+
+      <!-- <a class="hub-card move-up-on-hover hub-sales reveal is-visible" href="#contact">
         <span class="hub-icon">🔧</span>
         <strong>Book Auto Service</strong>
         <small>Schedule repairs through AutoLeap</small>
@@ -150,7 +184,7 @@
         <span class="hub-icon">📋</span>
         <strong>View Services</strong>
         <small>Diagnostics, brakes, tires, A/C, maintenance</small>
-      </a>
+      </a> -->
     </div>
   </div>
 </section>
@@ -335,7 +369,7 @@
             <label class="checkbox-label"><input type="checkbox" name="Oil_change"><span>Oil change <span class="deal" expires="2026/11/30">15% off</span></span></label>
             <label class="checkbox-label"><input type="checkbox" name="Tire_rotation"><span>Tire rotation <span class="deal" expires="2026/11/30">15% off</span></span></label>
             <label class="checkbox-label"><input type="checkbox" name="Alignment"><span>Alignment</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Brake_service"><span>Brake service <span class="deal" expires="2026/11/30">$50 off</span>: brake pads, rotors, and calipers</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Brake_service"><span>Brake service: <span class="deal" expires="2026/11/30">$50 off</span> brake pads, rotors, and calipers</span></label>
           </div>
 
           <div class="form-col">
@@ -345,7 +379,7 @@
             <label class="checkbox-label"><input type="checkbox" name="Snow_plow_service"><span>Snow plow service</span></label>
             <label class="checkbox-label"><input type="checkbox" name="Snow_plow_install"><span>Snow plow installations</span></label>
             <label class="checkbox-label"><input type="checkbox" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Winterization"><span>Winterization <span class="deal" expires="2026/11/30">10% off</span>: battery check, tire check, safety checks</span></label>
+            <label class="checkbox-label"><input type="checkbox" name="Winterization"><span>Winterization: <span class="deal" expires="2026/11/30">10% off</span> battery check, tire check, safety checks</span></label>
           </div>
         </div>
 
@@ -600,6 +634,7 @@
         <img src="/assets/svg/close-button.svg" alt="x" class="seasonal-modal-close" aria-label="Close seasonal information" role="button" tabindex="0" data-seasonal-close>
         <div class="summer-deal-card custom-scrollbar">
           <div class="summer-deal-copy">
+            <!--
             <h2>Promotional Offer:</h2>
 
             <div class="summer-actions">
@@ -636,18 +671,17 @@
             </div>
 
             <hr />
+             -->
 
-            <h2>Get up to $25 back with the purchase and installation of a qualifying DieHard battery!</h2>
+            <h2 id="deal-modal-title"></h2>
 
-            <p>
-              It's that time of year when the temperature drops and older car batteries start failing, but JVK Auto Service and Sales can help!
-              Get up to $25 back with the purchase and installation of a qualifying DieHard battery, now through January 31, 2027.
-            </p>
+            <div id="deal-modal-body"></div>
 
             <img
+              id="deal-modal-img"
               style="border-radius: 5%;"
-              src="assets/specials/2026/fall/2026-11-01-q75.webp"
-              alt="Get up to $25 back with the purchase and installation of a qualifying DieHard battery!"
+              src=""
+              alt=""
             />
         </div>
       </div>
