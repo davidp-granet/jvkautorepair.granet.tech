@@ -326,7 +326,7 @@ function buildMessage(fields) {
 
   let dropOffTime = '';
   if (clean(fields.dropOffTime !== '')) {
-    dropOffTime = '\nDrop off time: ' + clean(new Date(fields.dropOffTime).toLocaleString());
+    dropOffTime = 'Preferred drop off time: ' + clean(new Date(fields.dropOffTime).toLocaleString()) + '\n';
   }
 
   let promoCode = '';
@@ -334,7 +334,7 @@ function buildMessage(fields) {
     promoCode = '\nPromo Code: ' + clean(fields.promo);
   }
 
-  return 'Message:\n' + clean(fields.message) + '\n' + dropOffTime + promoCode + checkedItems;
+  return dropOffTime + 'Message:\n' + clean(fields.message) + '\n' + promoCode + checkedItems;
 }
 
 function validate(payload) {
