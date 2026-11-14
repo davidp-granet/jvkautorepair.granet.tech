@@ -389,6 +389,7 @@
         </script>
 
         <label class="text-label">Promo Code:<input id="promo-code" name="promo" type="text"></label>
+
         <label class="text-label">Message<textarea name="message" rows="7" required></textarea></label>
 
         <input type="hidden" name="challenge_response" value="">
@@ -697,6 +698,24 @@
 </div>
 
 <script defer src="/script.js"></script>
+
+<script>
+  (() => {
+    const webParams = new URLSearchParams(location.search);
+
+    const promoCode = webParams.get('promo');
+    const check = webParams.get('check');
+
+    if (promoCode) {
+      document.getElementById('promo-code').value = promoCode;
+    }
+
+    if (check) {
+      document.getElementById(check).checked = true;
+    }
+
+  })();
+</script>
 
 <script>
   if (location.host.includes('granet.tech')) {
