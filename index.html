@@ -28,7 +28,7 @@
 
   <!-- CSS -->
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css"> -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <link rel="preload" href="/assets/css/jvk-messenger-button.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/assets/css/jvk-messenger-button.css"></noscript>
 
@@ -696,7 +696,19 @@
   </section>
 </div>
 
-<script defer src="script.js"></script>
+<script defer src="/script.js"></script>
+
+<script>
+  if (location.host.includes('granet.tech')) {
+    document.querySelectorAll('[href^="/"]').forEach(elem => {
+      elem.setAttribute('href', location.origin + '/jvkautorepair.com' +  elem.getAttribute('href'));
+    });
+
+    document.querySelectorAll('[src^="/"]').forEach(elem => {
+      elem.setAttribute('src', location.origin + '/jvkautorepair.com' +  elem.getAttribute('src'));
+    });
+  }
+</script>
 
 </body>
 </html>
