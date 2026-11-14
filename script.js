@@ -324,12 +324,17 @@ function buildMessage(fields) {
     }
   }
 
+  let dropOffTime = '';
+  if (clean(fields.dropOffTime !== '')) {
+    dropOffTime = '\nDrop off time: ' + clean(new Date(fields.dropOffTime).toLocaleString());
+  }
+
   let promoCode = '';
   if (clean(fields.promo) !== '') {
     promoCode = '\nPromo Code: ' + clean(fields.promo);
   }
 
-  return 'Message:\n' + clean(fields.message) + '\n' + promoCode + checkedItems;
+  return 'Message:\n' + clean(fields.message) + '\n' + dropOffTime + promoCode + checkedItems;
 }
 
 function validate(payload) {
