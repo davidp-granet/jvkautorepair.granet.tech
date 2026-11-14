@@ -114,6 +114,41 @@
 <!-- <script defer src="/script.js"></script> -->
 
 <script>
+  // Nav menu code
+
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const links = document.querySelector('[data-nav-links]');
+  if (toggle && links) {
+    toggle.addEventListener('click', event => {
+      event.stopPropagation();
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // Clicking anywhere closes the nav menu.
+  document.addEventListener('click', event => {
+    const navMenu = document.querySelector('.nav-links.is-open');
+    if (!navMenu) {
+      return;
+    }
+
+    for (
+      let /** @type {HTMLElement} */ element = event.target;
+      element !== document.body;
+      element = element.parentElement
+    ) {
+      if (event.target === navMenu) {
+        return;
+      }
+    }
+
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', false);
+  });
+</script>
+
+<script>
   if (location.host.includes('granet.tech')) {
     document.querySelectorAll('[href^="/"]').forEach(elem => {
       elem.setAttribute('href', location.origin + '/jvkautorepair.com' +  elem.getAttribute('href'));

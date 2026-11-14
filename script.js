@@ -1,3 +1,4 @@
+// Nav menu code
 
 const toggle = document.querySelector('[data-nav-toggle]');
 const links = document.querySelector('[data-nav-links]');
@@ -8,6 +9,29 @@ if (toggle && links) {
     toggle.setAttribute('aria-expanded', String(open));
   });
 }
+
+// Clicking anywhere closes the nav menu.
+document.addEventListener('click', event => {
+  const navMenu = document.querySelector('.nav-links.is-open');
+  if (!navMenu) {
+    return;
+  }
+
+  for (
+    let /** @type {HTMLElement} */ element = event.target;
+    element !== document.body;
+    element = element.parentElement
+  ) {
+    if (event.target === navMenu) {
+      return;
+    }
+  }
+
+  links.classList.remove('is-open');
+  toggle.setAttribute('aria-expanded', false);
+});
+
+// End Nav menu code
 
 const reveals = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
@@ -89,27 +113,6 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && contactModal && contactModal.classList.contains('is-open')) {
     closeContactModal();
   }
-});
-
-// Clicking anywhere closes the nav menu.
-document.addEventListener('click', event => {
-  const navMenu = document.querySelector('.nav-links.is-open');
-  if (!navMenu) {
-    return;
-  }
-
-  for (
-    let /** @type {HTMLElement} */ element = event.target;
-    element !== document.body;
-    element = element.parentElement
-  ) {
-    if (event.target === navMenu) {
-      return;
-    }
-  }
-
-  links.classList.remove('is-open');
-  toggle.setAttribute('aria-expanded', false);
 });
 
 // Open the contact modal from /index.html#contact or any same-page #contact link.
