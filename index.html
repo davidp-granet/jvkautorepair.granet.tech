@@ -200,35 +200,35 @@
         <span class="card-icon">🛑</span>
         <h3>Brake Repair</h3>
         <p>Pads, rotors, calipers, brake fluid, brake noise, vibration, and safety inspections.</p>
-        <a class="text-link service-cta" href="#contact">Schedule this service →</a>
+        <a class="text-link service-cta" href="#contact" onclick="document.getElementById('Brake_service').checked = true;">Schedule this service →</a>
       </article>
 
       <article class="service-card service-card-linked reveal is-visible">
         <span class="card-icon">💡</span>
         <h3>Check Engine Light</h3>
         <p>Check engine lights, warning lights, sensor issues, and deep troubleshooting.</p>
-        <a class="text-link service-cta" href="#contact">Schedule this service →</a>
+        <a class="text-link service-cta" href="#contact" onclick="document.getElementById('Check_engine_light').checked = true;">Schedule this service →</a>
       </article>
 
       <article class="service-card service-card-linked reveal is-visible">
         <span class="card-icon">🛢️</span>
         <h3>Oil Change</h3>
         <p>Oil changes, filters, fluids, belts, hoses, batteries, tune-ups, and manufacturer mileage maintenance.</p>
-        <a class="text-link service-cta" href="#contact">Schedule this service →</a>
+        <a class="text-link service-cta" href="#contact" onclick="document.getElementById('Oil_change').checked = true;">Schedule this service →</a>
       </article>
 
       <article class="service-card service-card-linked reveal is-visible">
         <span class="card-icon">🛞</span>
         <h3>Tire Rotation</h3>
         <p>Tire repair, mounting, balancing, shocks, struts, steering, suspension noise, and ride-quality concerns.</p>
-        <a class="text-link service-cta" href="#contact">Schedule this service →</a>
+        <a class="text-link service-cta" href="#contact" onclick="document.getElementById('Tire_rotation').checked = true;">Schedule this service →</a>
       </article>
 
       <article class="service-card service-card-linked reveal is-visible">
         <span class="card-icon">❄️</span>
         <h3>A/C, Heating &amp; Cooling</h3>
         <p>A/C service, heat concerns, radiator issues, coolant leaks, overheating, fans, thermostats, and seasonal checks.</p>
-        <a class="text-link service-cta" href="#contact">Schedule this service →</a>
+        <a class="text-link service-cta" href="#contact" onclick="document.getElementById('Heat_and_AC_service').checked = true;">Schedule this service →</a>
       </article>
 
       <article class="service-card service-card-linked reveal is-visible">
@@ -365,21 +365,21 @@
           <div class="form-col">
             <p class="text-label">Maintenance:</p>
 
-            <label class="checkbox-label"><input type="checkbox" name="Check_engine_light"><span>Check Engine Light Diagnosis <span class="deal" expires="2026/11/30">FREE</span></span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Oil_change"><span>Oil change <span class="deal" expires="2026/11/30">15% off</span></span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Tire_rotation"><span>Tire rotation <span class="deal" expires="2026/11/30">15% off</span></span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Alignment"><span>Alignment</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Brake_service"><span>Brake service: <span class="deal" expires="2026/11/30">$50 off</span> brake pads, rotors, and calipers</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Check_engine_light" name="Check_engine_light"><span>Check Engine Light Diagnosis <span class="deal" expires="2026/11/30">FREE</span></span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Oil_change" name="Oil_change"><span>Oil change <span class="deal" expires="2026/11/30">15% off</span></span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Tire_rotation" name="Tire_rotation"><span>Tire rotation <span class="deal" expires="2026/11/30">15% off</span></span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Alignment" name="Alignment"><span>Alignment</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Brake_service" name="Brake_service"><span>Brake service: <span class="deal" expires="2026/11/30">$50 off</span> brake pads, rotors, and calipers</span></label>
           </div>
 
           <div class="form-col">
             <p class="text-label">Winterization:</p>
 
-            <label class="checkbox-label"><input type="checkbox" name="Undercoating"><span>Undercoating</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Snow_plow_service"><span>Snow plow service</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Snow_plow_install"><span>Snow plow installations</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
-            <label class="checkbox-label"><input type="checkbox" name="Winterization"><span>Winterization: <span class="deal" expires="2026/11/30">10% off</span> battery check, tire check, safety checks</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Undercoating" name="Undercoating"><span>Undercoating</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Snow_plow_service" name="Snow_plow_service"><span>Snow plow service</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Snow_plow_install" name="Snow_plow_install"><span>Snow plow installations</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Heat_and_AC_service" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Winterization" name="Winterization"><span>Winterization: <span class="deal" expires="2026/11/30">10% off</span> battery check, tire check, safety checks</span></label>
           </div>
         </div>
 
