@@ -722,7 +722,7 @@ h1 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 2rem;
   padding-bottom: 2.5rem;
 }
@@ -738,6 +738,7 @@ h1 {
   margin-bottom: 0;
 }
 
+.site-footer .footer-hours span,
 .site-footer p,
 .site-footer a {
   color: var(--muted);
@@ -1860,6 +1861,10 @@ body.modal-open {
   .summer-deal-grid {
     grid-template-columns: 1fr;
   }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 930px) {
@@ -1957,8 +1962,7 @@ body.modal-open {
   .action-card-grid,
   .contact-grid,
   .cards-5,
-  .quick-grid,
-  .footer-grid {
+  .quick-grid {
     grid-template-columns: 1fr;
   }
 
