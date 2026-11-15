@@ -7,7 +7,7 @@
   <meta name="description" content="JVK Auto Service &amp; Sales in Derry, NH offers auto repair, used vehicle sales, financing, and U-Haul truck and trailer rentals.">
   <meta name="theme-color" content="#b80f1f">
   <meta property="og:title" content="JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul">
-  <meta property="og:description" content="Schedule service, reserve U-Haul, browse JVK Auto used vehicles, and view repair services from one customer-friendly page.">
+  <meta property="og:description" content="JVK Auto Service &amp; Sales in Derry, NH offers auto repair, used vehicle sales, financing, and U-Haul truck and trailer rentals.">
   <meta property="og:type" content="website">
 
   <!-- Google tag (gtag.js) -->
@@ -375,11 +375,11 @@
           <div class="form-col">
             <p class="text-label">Winterization:</p>
 
-            <label class="checkbox-label"><input type="checkbox" id="Undercoating" name="Undercoating"><span>Undercoating</span></label>
-            <label class="checkbox-label"><input type="checkbox" id="Snow_plow_service" name="Snow_plow_service"><span>Snow plow service</span></label>
-            <label class="checkbox-label"><input type="checkbox" id="Snow_plow_install" name="Snow_plow_install"><span>Snow plow installations</span></label>
-            <label class="checkbox-label"><input type="checkbox" id="Heat_and_AC_service" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
             <label class="checkbox-label"><input type="checkbox" id="Winterization" name="Winterization"><span>Winterization: <span class="deal" expires="2026/11/30">10% off</span> battery check, tire check, safety checks</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Heat_and_AC_service" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Battery_service" name="Battery_service"><span>Battery service</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Undercoating" name="Undercoating"><span>Undercoating</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Snow_plow_service" name="Snow_plow_service"><span>Snow plow service and installations</span></label>
           </div>
         </div>
 
@@ -713,18 +713,17 @@
     if (check) {
       document.getElementById(check).checked = true;
     }
-
   })();
 </script>
 
 <script>
   if (location.host.includes('granet.tech')) {
     document.querySelectorAll('[href^="/"]').forEach(elem => {
-      elem.setAttribute('href', location.origin + '/jvkautorepair.com' +  elem.getAttribute('href'));
+      elem.setAttribute('href', location.origin + '/jvkautorepair.com' + elem.getAttribute('href'));
     });
 
     document.querySelectorAll('[src^="/"]').forEach(elem => {
-      elem.setAttribute('src', location.origin + '/jvkautorepair.com' +  elem.getAttribute('src'));
+      elem.setAttribute('src', location.origin + '/jvkautorepair.com' + elem.getAttribute('src'));
     });
   }
 </script>

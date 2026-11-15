@@ -3,26 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul</title>
+  <title>Winterization Special | JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul</title>
   <meta name="description" content="JVK Auto Service &amp; Sales in Derry, NH offers auto repair, used vehicle sales, financing, and U-Haul truck and trailer rentals.">
   <meta name="theme-color" content="#b80f1f">
-  <meta property="og:title" content="JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul">
-  <meta property="og:description" content="Schedule service, reserve U-Haul, browse JVK Auto used vehicles, and view repair services from one customer-friendly page.">
+  <meta property="og:title" content="Winterization Special | JVK Auto Service &amp; Sales | Derry NH Auto Repair, Used Cars &amp; U-Haul">
+  <meta property="og:description" content="JVK Auto Service &amp; Sales in Derry, NH offers auto repair, used vehicle sales, financing, and U-Haul truck and trailer rentals.">
   <meta property="og:type" content="website">
 
   <!-- Images -->
+  <link rel="preload" as="image" href="JVK_Winterization_Snowbank_Ad.png" fetchpriority="high">
   <link rel="preload" as="image" href="/assets/jvk-auto.svg" fetchpriority="high">
   <link rel="preload" as="image" href="/assets/Steel-Man-Half-v2-q80.webp" fetchpriority="high">
 
   <!-- CSS -->
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css"> -->
   <link rel="stylesheet" href="/styles.css">
-
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap"></noscript>
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" sizes="16x16" href="/assets/favicons/16x16.jpg" />
@@ -43,12 +37,10 @@
       <img src="/assets/jvk-auto.svg" alt="JVK AUTO" height="64" width="90.156">
     </a>
     <div class="service-nav-links">
-      <!-- <button class="btn-small nav-contact-button" type="button" data-contact-open="">Contact Us</button> -->
       <a class="btn-small nav-contact-button" href="/#contact">Contact Us</a>
       <a class="btn btn-small btn-sales" href="https://www.jvkautos.com/cars-for-sale" target="_blank" rel="noopener">Browse Used Cars</a>
       <a class="btn btn-small btn-uhaul" href="https://www.uhaul.com/Locations/Truck-Rentals-near-Derry-NH-03038/037572/" target="_blank" rel="noopener">U-Haul</a>
       <a class="btn btn-small" href="/?promo=WINTER&check=Winterization#contact">Book Service</a>
-      <!-- <a class="btn btn-small" href="https://myalp.io/nuatgx" target="_blank" rel="noopener">Book Service</a> -->
     </div>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle="">
       <span class="sr-only">Open navigation</span>
@@ -71,7 +63,8 @@
 </header>
 
 <main id="main">
-<section class="marquee-image-hero" aria-label="JVK homepage mountain banner">
+
+  <section class="marquee-image-hero" aria-label="JVK homepage mountain banner">
   <div class="container marquee-image-link">
     <a href="/?promo=WINTER&check=Winterization#contact" style="margin: 40px 0;">
       <img id="main-image" src="JVK_Winterization_Snowbank_Ad.png" alt="JVK Ad">
@@ -111,8 +104,6 @@
   </div>
 </footer>
 
-<!-- <script defer src="/script.js"></script> -->
-
 <script>
   // Nav menu code
 
@@ -151,11 +142,11 @@
 <script>
   if (location.host.includes('granet.tech')) {
     document.querySelectorAll('[href^="/"]').forEach(elem => {
-      elem.setAttribute('href', location.origin + '/jvkautorepair.com' +  elem.getAttribute('href'));
+      elem.setAttribute('href', location.origin + '/jvkautorepair.com' + elem.getAttribute('href'));
     });
 
     document.querySelectorAll('[src^="/"]').forEach(elem => {
-      elem.setAttribute('src', location.origin + '/jvkautorepair.com' +  elem.getAttribute('src'));
+      elem.setAttribute('src', location.origin + '/jvkautorepair.com' + elem.getAttribute('src'));
     });
   }
 </script>
