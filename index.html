@@ -388,6 +388,13 @@
           document.getElementById('dropOffTime').setAttribute('min', new Date().toISOString().slice(0, 10) + 'T00:00');
         </script>
 
+        <label class="text-label" for="dropOffCar">Will you be dropping off your vehicle?</label>
+        <select id="dropOffCar" class="input-field" name="dropOffCar" style="font: inherit;">
+          <option value=""></option>
+          <option value="I will wait with my vehicle">I will wait with my vehicle</option>
+          <option value="I will drop off my vehicle">I will drop off my vehicle</option>
+        </select>
+
         <label class="text-label">Promo Code:<input id="promo-code" name="promo" type="text"></label>
 
         <label class="text-label">Message<textarea name="message" rows="7" required></textarea></label>

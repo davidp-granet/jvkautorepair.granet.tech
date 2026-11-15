@@ -332,12 +332,17 @@ function buildMessage(fields) {
     dropOffTime = 'Preferred drop off time: ' + clean(new Date(fields.dropOffTime).toLocaleString()) + '\n';
   }
 
+  let dropOffCar = '';
+  if (fields.dropOffCar !== '') {
+    dropOffCar = '\n' + fields.dropOffCar + '\n';
+  }
+
   let promoCode = '';
   if (clean(fields.promo) !== '') {
     promoCode = '\nPromo Code: ' + clean(fields.promo);
   }
 
-  return dropOffTime + 'Message:\n' + clean(fields.message) + '\n' + promoCode + checkedItems;
+  return dropOffTime + dropOffCar + 'Message:\n' + clean(fields.message) + '\n' + promoCode + checkedItems;
 }
 
 function validate(payload) {
