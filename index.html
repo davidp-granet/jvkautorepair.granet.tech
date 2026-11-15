@@ -383,7 +383,7 @@
           </div>
         </div>
 
-        <label class="text-label">Preferred drop off time:<input id="dropOffTime" name="dropOffTime" type="datetime-local"></label>
+        <label class="text-label">Preferred drop off time:<input id="dropOffTime" name="dropOffTime" type="datetime-local" step="900"></label>
         <script>
           document.getElementById('dropOffTime').setAttribute('min', new Date().toISOString().slice(0, 10) + 'T00:00');
         </script>
