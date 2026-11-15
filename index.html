@@ -336,7 +336,7 @@
     <div class="contact-container">
       <form class="contact-form" id="contact-form">
 
-        <div class="contact-buttons" style="display: flex; gap: 10px;">
+        <div class="contact-buttons" style="display: flex; gap: 10px; flex-wrap: wrap;">
           <a class="btn btn-small btn-ghost" href="tel:+16034212678">📞 Call</a>
           <a class="btn btn-small btn-ghost" href="mailto:jvkautoservice@gmail.com">✉️ Email</a>
           <a class="btn btn-small btn-ghost" href="https://maps.app.goo.gl/dwxkVYmWBmCTRs2DA" target="_blank" rel="noopener">📍 Maps</a>
@@ -375,21 +375,25 @@
           <div class="form-col">
             <p class="text-label">Winterization:</p>
 
-            <label class="checkbox-label"><input type="checkbox" id="Winterization" name="Winterization"><span>Winterization: <span class="deal" expires="2026/11/30">10% off</span> battery check, tire check, safety checks</span></label>
-            <label class="checkbox-label"><input type="checkbox" id="Heat_and_AC_service" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
             <label class="checkbox-label"><input type="checkbox" id="Battery_service" name="Battery_service"><span>Battery service</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Heat_and_AC_service" name="Heat_and_AC_service"><span>Heat & AC Service</span></label>
             <label class="checkbox-label"><input type="checkbox" id="Undercoating" name="Undercoating"><span>Undercoating</span></label>
             <label class="checkbox-label"><input type="checkbox" id="Snow_plow_service" name="Snow_plow_service"><span>Snow plow service and installations</span></label>
+            <label class="checkbox-label"><input type="checkbox" id="Winterization" name="Winterization"><span>Winterization: <span class="deal" expires="2026/11/30">10% off</span> battery check, tire check, safety checks</span></label>
           </div>
         </div>
 
-        <label class="text-label">Preferred drop off time:<input id="dropOffTime" name="dropOffTime" type="datetime-local" step="900"></label>
+        <label class="text-label">Preferred drop off time:<input id="dropOffTime" name="dropOffTime" type="datetime-local" step="900" style="background-color: white;"></label>
         <script>
-          document.getElementById('dropOffTime').setAttribute('min', new Date().toISOString().slice(0, 10) + 'T00:00');
+          (() => {
+            const dropOffTime = document.getElementById('dropOffTime');
+            dropOffTime.setAttribute('min', new Date().toISOString().slice(0, 10) + 'T00:00');
+            dropOffTime.setAttribute('step', '900');
+          })();
         </script>
 
         <label class="text-label" for="dropOffCar">Will you be dropping off your vehicle?</label>
-        <select id="dropOffCar" class="input-field" name="dropOffCar" style="font: inherit;">
+        <select id="dropOffCar" class="input-field" name="dropOffCar" style="font: inherit; background-color: white;">
           <option value=""></option>
           <option value="I will wait with my vehicle">I will wait with my vehicle</option>
           <option value="I will drop off my vehicle">I will drop off my vehicle</option>
