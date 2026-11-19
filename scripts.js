@@ -46,8 +46,24 @@ const deals = {
       </p>
     `,
     'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-02-free-safety-check-q75.webp',
-    'deal-modal-image-alt': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
+    'deal-modal-image-alt': 'Schedule a free safety check at JVK Auto Service & Sales.',
     'expires': '2026/11/30'
+  },
+  'holiday-giveback': {
+    'deal-modal-title': 'Starting November 27, get 15% off qualifying repairs and maintenance of $100 or more, up to $100 off. Book in advance!',
+    'deal-modal-body': `
+      <p>UPDATE: The Holiday Giveback is extended through December 31, 2026.</p>
+      <p>🎄 A holiday thank-you is coming from JVK Auto Service and Sales!</p>
+      <p>
+        Starting November 27, get 15% off qualifying repairs and maintenance of $100 or more, up to $100 off.
+        You can also book a free Holiday Road Trip Check by appointment, with no purchase required.
+        Book ahead for November 27 through December 31, 2026.
+      </p>
+      <p>📍 We're at <a href="https://maps.app.goo.gl/dwxkVYmWBmCTRs2DA" target="_blank" rel="noopener" style="color: var(--red);">6 Folsom Rd in Derry, NH.</a></p>
+      <p>Minimum spend before taxes and fees. One discount per customer. Cannot be combined with other offers.</p>
+    `,
+    'deal-modal-image-src': 'assets/specials/2026/fall/holiday_giveback_q75.webp',
+    'deal-modal-image-alt': 'The Holiday Giveback is extended through December 31, 2026.',
   },
   'diehard-battery': {
     'deal-modal-title': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
