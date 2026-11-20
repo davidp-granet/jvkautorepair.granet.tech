@@ -67,6 +67,20 @@ const deals = {
     'deal-modal-image-alt': 'Schedule a free safety check at JVK Auto Service & Sales.',
     'expires': '2026/11/30'
   },
+  '10-off-oil-change': {
+    'deal-modal-title': '$10 off a regular oil change',
+    'deal-modal-body': `
+      <p>
+        Before the Thanksgiving travel rush, check whether your vehicle is due for an oil change.
+        Save $10 on a regular oil change at JVK Auto Service & Sales.
+        Mention this ad to receive the offer. Valid November 1–30, 2026.
+        Schedule your appointment with our team.
+      </p>
+    `,
+    'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-02-oil-change-q75.webp',
+    'deal-modal-image-alt': '$10 off a regular oil change',
+    'expires': '2026/11/30'
+  },
   'holiday-giveback': {
     'deal-modal-title': 'Starting November 27, get 15% off qualifying repairs and maintenance of $100 or more, up to $100 off. Book in advance!',
     'deal-modal-body': `
