@@ -277,29 +277,47 @@ function buildPayload() {
 }
 
 function buildMessage(fields) {
+  const customerInfo = '\n' +
+    'Name: ' + clean(fields.name) + '\n' +
+    'Email: ' + clean(fields.email) + '\n' +
+    'Phone: ' + clean(fields.phone) + '\n';
+
   let checkedItems = '';
   for (const element in fields) {
     if (fields[element] === 'on') {
-      checkedItems += '\n[x] ' + element.replaceAll('_', ' ');
+      checkedItems += '[x] ' + element.replaceAll('_', ' ') + '\n';
     }
+  }
+
+  if (checkedItems) {
+    checkedItems = 'Services:\n' + checkedItems;
   }
 
   let dropOffTime = '';
   if (clean(fields.dropOffTime !== '')) {
-    dropOffTime = 'Preferred drop off time: ' + clean(new Date(fields.dropOffTime).toLocaleString()) + '\n';
+    dropOffTime = 'Preferred drop off time:\n' + clean(new Date(fields.dropOffTime).toLocaleString()) + '\n';
   }
 
   let dropOffCar = '';
   if (fields.dropOffCar !== '') {
-    dropOffCar = '\n' + fields.dropOffCar + '\n';
+    dropOffCar = '\n[x] ' + fields.dropOffCar + '\n';
   }
+
+  const message = 'Message:\n' + clean(fields.message) + '\n';
 
   let promoCode = '';
   if (clean(fields.promo) !== '') {
-    promoCode = '\nPromo Code: ' + clean(fields.promo);
+    promoCode = 'Promo Code: ' + clean(fields.promo) + '\n';
   }
 
-  return dropOffTime + dropOffCar + 'Message:\n' + clean(fields.message) + '\n' + promoCode + checkedItems;
+  return '```' +
+    customerInfo +
+    checkedItems +
+    dropOffTime +
+    dropOffCar +
+    message +
+    promoCode +
+    '```';
 }
 
 function validate(payload) {
