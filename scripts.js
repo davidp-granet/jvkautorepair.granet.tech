@@ -52,7 +52,10 @@ const deals = {
       One discount per vehicle. Cannot be combined. Visual checks only; diagnostic testing extra.</p>
     `,
     'deal-modal-image-src': 'assets/specials/2026/fall/25-brake-per-axel-q75.webp',
-    'deal-modal-image-alt': 'Save $25 on brake service per axle.'
+    'deal-modal-image-alt': 'Save $25 on brake service per axle.',
+    'bookFunc': () => {
+      document.getElementById('Brake_service').checked = true;
+    }
   },
   'free-safety-check': {
     'deal-modal-title': 'Free safety check',
@@ -79,7 +82,9 @@ const deals = {
     `,
     'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-02-oil-change-q75.webp',
     'deal-modal-image-alt': '$10 off a regular oil change',
-    'expires': '2026/11/30'
+    'bookFunc': () => {
+      document.getElementById('Oil_change').checked = true;
+    }
   },
   'holiday-giveback': {
     'deal-modal-title': 'Starting November 27, get 15% off qualifying repairs and maintenance of $100 or more, up to $100 off. Book in advance!',
@@ -107,7 +112,9 @@ const deals = {
     `,
     'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-01-q75.webp',
     'deal-modal-image-alt': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
-    'expires': '2027/01/31'
+    'bookFunc': () => {
+      document.getElementById('Battery_service').checked = true;
+    }
   }
 };
 
@@ -157,6 +164,13 @@ seasonalOpeners.forEach((opener) => {
       const dealImg = document.getElementById('deal-modal-img');
       dealImg.setAttribute('src', currentDeal['deal-modal-image-src']);
       dealImg.setAttribute('alt', currentDeal['deal-modal-image-alt']);
+
+      const bookBtn = document.getElementById('deal-modal-book-btn');
+      if (currentDeal['bookFunc']) {
+        bookBtn.onclick = currentDeal['bookFunc'];
+      } else {
+        bookBtn.onclick = null;
+      }
     }
 
     openSeasonalModal();
