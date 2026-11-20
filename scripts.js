@@ -36,6 +36,24 @@ document.addEventListener('click', event => {
 // Deal modal
 
 const deals = {
+  '25-brake-per-axel': {
+    'deal-modal-title': 'Save $25 on brake service per axle',
+    'deal-modal-body': `
+      <p>🍂 Make time for your brakes before holiday travel.</p>
+      <p>If you have noticed squeaking or a change in how your brakes feel, call to arrange a visit.</p>
+
+      <p>Save $25 on brake service per axle.<br>
+      Plus a FREE safety check.</p>
+
+      <p>Offer valid: NOV 15-21, 2026.</p>
+      <p>📞 Call <a href="tel:+16034212678" style="color: var(--red);">(603) 421-2678</a> to book with JVK Auto Service & Sales.</p>
+
+      <p>MUST MENTION THIS AD TO RECEIVE DISCOUNT.<br>
+      One discount per vehicle. Cannot be combined. Visual checks only; diagnostic testing extra.</p>
+    `,
+    'deal-modal-image-src': 'assets/specials/2026/fall/25-brake-per-axel-q75.webp',
+    'deal-modal-image-alt': 'Save $25 on brake service per axle.'
+  },
   'free-safety-check': {
     'deal-modal-title': 'Free safety check',
     'deal-modal-body': `
@@ -63,7 +81,7 @@ const deals = {
       <p>Minimum spend before taxes and fees. One discount per customer. Cannot be combined with other offers.</p>
     `,
     'deal-modal-image-src': 'assets/specials/2026/fall/holiday_giveback_q75.webp',
-    'deal-modal-image-alt': 'The Holiday Giveback is extended through December 31, 2026.',
+    'deal-modal-image-alt': 'The Holiday Giveback is extended through December 31, 2026.'
   },
   'diehard-battery': {
     'deal-modal-title': 'Get up to $25 back with the purchase and installation of a qualifying DieHard battery!',
