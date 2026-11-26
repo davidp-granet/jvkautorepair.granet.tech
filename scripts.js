@@ -296,11 +296,26 @@ function buildMessage(fields) {
   let dropOffTime = '';
   if (clean(fields.dropOffTime !== '')) {
     dropOffTime = 'Preferred drop off time:\n' + clean(new Date(fields.dropOffTime).toLocaleString()) + '\n';
+  } else {
+    dropOffTime = 'Preferred drop off time not specified.\n'
   }
 
   let dropOffCar = '';
   if (fields.dropOffCar !== '') {
-    dropOffCar = '\n[x] ' + fields.dropOffCar + '\n';
+    dropOffCar = '[x] ' + fields.dropOffCar + '\n';
+  }
+
+  let vehicleInfo = '';
+
+  const vehicleBuildInfo = clean([
+    clean(fields.car_color),
+    clean(fields.car_year),
+    clean(fields.car_make),
+    clean(fields.car_model)
+  ].join(' ').replace(/\s+/g, ' '));
+
+  if (vehicleBuildInfo) {
+    vehicleInfo = 'Vehicle: ' + vehicleBuildInfo + '\n';
   }
 
   const message = 'Message:\n' + clean(fields.message) + '\n';
@@ -315,6 +330,7 @@ function buildMessage(fields) {
     checkedItems +
     dropOffTime +
     dropOffCar +
+    vehicleInfo +
     message +
     promoCode +
     '```';
@@ -341,6 +357,10 @@ function validate(payload) {
   }
 
   return "";
+}
+
+function testBuildMessage() {
+  console.log(buildMessage(Object.fromEntries(new FormData(form))));
 }
 
 form.addEventListener("submit", async (event) => {
