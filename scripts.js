@@ -36,26 +36,24 @@ document.addEventListener('click', event => {
 // Deal modal
 
 const deals = {
-  '25-brake-per-axel': {
-    'deal-modal-title': 'Save $25 on brake service per axle',
+  '10-percent-off-labor-deal': {
+    'deal-modal-title': 'Save 10% on labor, up to $50',
     'deal-modal-body': `
-      <p>🍂 Make time for your brakes before holiday travel.</p>
-      <p>If you have noticed squeaking or a change in how your brakes feel, call to arrange a visit.</p>
-
-      <p>Save $25 on brake service per axle.<br>
-      Plus a FREE safety check.</p>
-
-      <p>Offer valid: NOV 15-21, 2026.</p>
+      <p>🦃 Thank you for trusting us with your ride.</p>
+      <p>As Thanksgiving arrives, we are grateful for our customers and the opportunity to serve you.</p>
+      <p>
+        Save 10% on labor, up to $50.<br>
+        Plus a FREE safety check.
+      </p>
+      <p>Offer valid: NOV 22-30, 2026.</p>
       <p>📞 Call <a href="tel:+16034212678" style="color: var(--red);">(603) 421-2678</a> to book with JVK Auto Service & Sales.</p>
-
-      <p>MUST MENTION THIS AD TO RECEIVE DISCOUNT.<br>
-      One discount per vehicle. Cannot be combined. Visual checks only; diagnostic testing extra.</p>
+      <p>
+        MUST MENTION THIS AD TO RECEIVE DISCOUNT.<br>
+        One discount per vehicle. Cannot be combined. Visual checks only; diagnostic testing extra.
+      </p>
     `,
-    'deal-modal-image-src': 'assets/specials/2026/fall/25-brake-per-axel-q75.webp',
-    'deal-modal-image-alt': 'Save $25 on brake service per axle.',
-    'bookFunc': () => {
-      document.getElementById('Brake_service').checked = true;
-    }
+    'deal-modal-image-src': 'assets/specials/2026/fall/10-percent-off-labor-deal-q75.webp',
+    'deal-modal-image-alt': 'Save 10% on labor, up to $50',
   },
   'free-safety-check': {
     'deal-modal-title': 'Free safety check',
@@ -69,6 +67,23 @@ const deals = {
     'deal-modal-image-src': 'assets/specials/2026/fall/2026-11-02-free-safety-check-q75.webp',
     'deal-modal-image-alt': 'Schedule a free safety check at JVK Auto Service & Sales.',
     'expires': '2026/11/30'
+  },
+  '20-off-syn-oil-change': {
+    'deal-modal-title': '$20 off a full synthetic oil change',
+    'deal-modal-body': `
+      <p>
+        From everyday commutes to holiday visits, we appreciate being part of your journey.
+        Thank you for choosing JVK.
+        Save $20 on a full synthetic oil change at JVK Auto Service & Sales.
+        Mention this ad to receive the offer.
+        Valid November 1-30, 2026. Schedule your appointment with our team.
+      </p>
+    `,
+    'deal-modal-image-src': 'assets/specials/2026/fall/syn-oil-change-q75.webp',
+    'deal-modal-image-alt': '$20 off a full synthetic oil change',
+    'bookFunc': () => {
+      document.getElementById('Oil_change').checked = true;
+    }
   },
   '10-off-oil-change': {
     'deal-modal-title': '$10 off a regular oil change',
